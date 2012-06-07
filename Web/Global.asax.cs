@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
+using Web.Models.Entities;
 
 namespace Web
 {
@@ -12,6 +13,11 @@ namespace Web
 
     public class MvcApplication : System.Web.HttpApplication
     {
+        /// <summary>
+        /// 全局设置
+        /// </summary>
+        public static Setting Setting { get; set; }
+
         public static void RegisterGlobalFilters(GlobalFilterCollection filters)
         {
             filters.Add(new HandleErrorAttribute());
@@ -24,7 +30,8 @@ namespace Web
             routes.MapRoute(
                 "Default", // Route name
                 "{controller}/{action}/{id}", // URL with parameters
-                new { controller = "Home", action = "Index", id = UrlParameter.Optional } // Parameter defaults
+                new { controller = "Home", action = "Index", id = UrlParameter.Optional }, // Parameter defaults
+                new[] { "Web.Controllers" }
             );
 
         }
@@ -35,6 +42,8 @@ namespace Web
 
             RegisterGlobalFilters(GlobalFilters.Filters);
             RegisterRoutes(RouteTable.Routes);
+
+            MvcApplication.Setting = Setting.Instance;
         }
     }
 }

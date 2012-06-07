@@ -47,21 +47,22 @@
   <ItemGroup>
     <Compile Include="Entities\ModelContext.cs" />
     <Compile Include="Entities\Place.cs" />
+    <Compile Include="Entities\Setting.cs" />
     <Compile Include="Entities\User.cs" />
+    <Compile Include="IRepositories\IPlaceRepository.cs" />
+    <Compile Include="IRepositories\IUserRepository.cs" />
     <Compile Include="Migrations\201206040717588_InitDatabase.cs" />
     <Compile Include="Migrations\201206040717588_InitDatabase.Designer.cs">
       <DependentUpon>201206040717588_InitDatabase.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\PlaceRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="IRepositories\" />
-    <Folder Include="Repositories\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
