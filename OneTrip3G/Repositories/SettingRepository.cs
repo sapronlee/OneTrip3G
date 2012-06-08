@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using OneTrip3G.IRepositories;
 using OneTrip3G.Models.Entities;
+using System.Data;
 
 namespace OneTrip3G.Repositories
 {
@@ -26,14 +27,9 @@ namespace OneTrip3G.Repositories
                 {
                     var dbSetting = db.Settings.FirstOrDefault(m => m.Name.Equals(setting.Name));
                     if (dbSetting == null)
-                    {
                         db.Settings.Add(setting);
-                    }
                     else
-                    {
-                        dbSetting = setting;
-                        db.Entry<Setting>(dbSetting).State = System.Data.EntityState.Modified;
-                    }
+                        db.Entry<Setting>(dbSetting).CurrentValues.SetValues(setting);
                 }
                 db.SaveChanges();
             }

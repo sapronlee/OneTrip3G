@@ -11,12 +11,12 @@ namespace OneTrip3G.Web.Extensions
 {
     public static class MarkupExtensions
     {
-        public static GlobalSetting GlobalSettings(this HtmlHelper html)
+        public static SettingModel GlobalSettings(this HtmlHelper html)
         {
             return DependencyResolver
                 .Current
-                .GetService<IGlobalSettingProvider>()
-                .GetGlobalSettings<GlobalSetting>();
+                .GetService<ISettingProvider>()
+                .GetGlobalSettings<SettingModel>();
         }
 
         public static MvcHtmlString MenuLink(this HtmlHelper html, string text, string action, string controller)

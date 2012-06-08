@@ -14,8 +14,8 @@ namespace OneTrip3G.IProviders
         {
             base.Load(builder);
 
-            builder.Register(c => new GlobalSettingProvider(c.Resolve<ISettingRepository>()))
-                .As<IGlobalSettingProvider>()
+            builder.Register(c => new SettingProvider(c.Resolve<ISettingRepository>()))
+                .As<ISettingProvider>()
                 .InstancePerLifetimeScope();
         }
     }

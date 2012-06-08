@@ -1,0 +1,25 @@
+﻿@model OneTrip3G.Models.SettingModel
+@{
+    ViewBag.Title = "设置";
+}
+
+@using (Html.BeginForm())
+{
+    <div class="wrap">
+        @Html.LabelFor(m => m.SiteName)
+        @Html.EditorFor(m => m.SiteName)
+        @Html.ValidationMessageFor(m => m.SiteName)
+    </div>
+    <div class="wrap">
+        @Html.LabelFor(m => m.Keywords)
+        @Html.EditorFor(m => m.Keywords)
+    </div>
+    <div class="wrap">
+        @Html.LabelFor(m => m.Description)
+        @Html.EditorFor(m => m.Description)
+    </div>
+    <div class="buttons wrap">
+	    <input class="button btn-control" name="commit" type="submit" value="保存" />
+	    <a href="@Url.Action("Index", "Home")" class="canel btn-control">取消</a>
+    </div>
+}

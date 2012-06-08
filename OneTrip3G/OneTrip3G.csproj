@@ -58,7 +58,7 @@
   <ItemGroup>
     <Compile Include="Attributes\SettingStorageAttribute.cs" />
     <Compile Include="Enums\StorageLocation.cs" />
-    <Compile Include="IProviders\IGlobalSettingProvider.cs" />
+    <Compile Include="IProviders\ISettingProvider.cs" />
     <Compile Include="IProviders\ISetting.cs" />
     <Compile Include="IProviders\ProvidersModule.cs" />
     <Compile Include="IRepositories\IPlaceRepository.cs" />
@@ -74,9 +74,9 @@
     <Compile Include="Models\Entities\Place.cs" />
     <Compile Include="Models\Entities\Setting.cs" />
     <Compile Include="Models\Entities\User.cs" />
-    <Compile Include="Models\GlobalSetting.cs" />
+    <Compile Include="Models\SettingModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Providers\GlobalSettingProvider.cs" />
+    <Compile Include="Providers\SettingProvider.cs" />
     <Compile Include="Repositories\SettingRepository.cs" />
   </ItemGroup>
   <ItemGroup>
