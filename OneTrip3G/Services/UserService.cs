@@ -25,7 +25,7 @@ namespace OneTrip3G.Services
         public bool AuthorizationUser(string userName, string password)
         {
             var encryptPassword = EncryptPassword(password);
-            var user = repository.Get(m => m.Name.Equals(userName) && m.Password.Equals(encryptPassword));
+            var user = repository.Get(m => m.Name.ToLower().Equals(userName.ToLower()) && m.Password.Equals(encryptPassword));
             return user != null;
         }
 
