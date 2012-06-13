@@ -5,26 +5,26 @@ using System.Text;
 using System.Reflection;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
-using OneTrip3G.IProviders;
+using OneTrip3G.IServices;
 using OneTrip3G.IRepositories;
 using OneTrip3G.Attributes;
 using OneTrip3G.Models.Entities;
 using OneTrip3G.Enums;
 
-namespace OneTrip3G.Providers
+namespace OneTrip3G.Services
 {
-    public class SettingProvider : ISettingProvider
+    public class SettingService : ISettingService
     {
         private readonly object @lock = new object();
         private readonly ISettingRepository repository;
         private readonly Dictionary<Type, ISetting> settingsStore = new Dictionary<Type, ISetting>();
 
-        public SettingProvider(ISettingRepository repository)
+        public SettingService(ISettingRepository repository)
         {
             this.repository = repository;
         }
 
-        public T GetGlobalSettings<T>() where T : ISetting
+        public T GetSettings<T>() where T : ISetting
         {
             //先检查Store里面是否存在，如果不存在在去读取
             var settingType = typeof(T);
@@ -41,7 +41,7 @@ namespace OneTrip3G.Providers
             return (T)settingsStore[settingType];
         }
 
-        public void SaveGlobalSettings<T>(T globalSetting) where T : ISetting
+        public void SaveSettings<T>(T globalSetting) where T : ISetting
         {
             var settingType = typeof(T);
 

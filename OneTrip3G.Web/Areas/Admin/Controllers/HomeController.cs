@@ -3,15 +3,27 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using OneTrip3G.Models;
+using OneTrip3G.IServices;
 
 namespace OneTrip3G.Web.Areas.Admin.Controllers
 {
     public class HomeController : BaseController
     {
+        private readonly IPlaceService placeService;
+
+        public HomeController(IPlaceService placeService)
+        {
+            this.placeService = placeService;
+        }
 
         public ActionResult Index()
         {
-            return View();
+            var model = new AdminHomeModel
+            {
+                PlaceCount = placeService.GetCount()
+            };
+            return View(model);
         }
 
     }

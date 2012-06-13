@@ -1,0 +1,60 @@
+﻿@model MvcPaging.IPagedList<OneTrip3G.Models.PlaceItem>
+@{
+    ViewBag.Title = "景点列表";
+}
+@section styles {
+    @{
+        Html.RequiresCss("wicegrid.css", "Base", 1);
+    }
+}
+@section sitemap {
+    <a href="@Url.Action("Index")" title="景点">景点</a> <span class="line">➔</span> <span
+        class="current_action">列表</span>
+}
+@section sidebar {
+    @RenderPage("~/Areas/Admin/Views/Places/_Sidebar.cshtml")
+}
+<h1>
+    景区列表</h1>
+<div class="wice_grid_container" id="grid">
+    <table class="wice_grid">
+        <thead>
+            <tr class="wice_grid_title_row">
+                <th class="sorted">ID</th>
+                <th>中文名</th>
+                <th>英文名</th>
+                <th>视频</th>
+                <th>地图</th>
+                <th class="actions">操作</th>
+            </tr>
+        </thead>
+        <tfoot>
+            <tr>
+                <td colspan="6">
+                    <div class="pagination_status">
+                      @Model.ItemStart - @Model.ItemEnd / @Model.PageCount
+                    </div>
+                </td>
+            </tr>
+        </tfoot>
+        <tbody>
+            @foreach(var place in Model)
+            {
+               <tr class="@(Model.IndexOf(place) % 2 != 0 ? "even" : "odd")">
+                    <td class="sorted">@place.Id</td>
+                    <td><strong>@place.Name</strong></td>
+                    <td>@place.EnglishName</td>
+                    <td>@place.HasVideo.ToString()</td>
+                    <td>@place.HasMap.ToString()</td>
+                    <td class="actions">
+                        <a href="@Url.AdminActionAndPage("Edit", "Places", place.Id, Model.PageNumber)" title="修改">修改</a> | 
+                        <a href="@Url.AdminAction("Delete", "Places", place.Id)" title="删除" onclick="return confirm('确认删除吗？')">删除</a>
+                    </td>
+                </tr> 
+            }
+        </tbody>
+    </table>
+    <div class="pager">
+	    @Html.Pager(Model.PageSize, Model.PageNumber, Model.TotalItemCount)
+	</div>
+</div>

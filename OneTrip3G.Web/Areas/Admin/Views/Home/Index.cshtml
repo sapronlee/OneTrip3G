@@ -1,41 +1,41 @@
-﻿@{
+﻿@model OneTrip3G.Models.AdminHomeModel
+@{
     ViewBag.Title = "后台首页";
 }
-
 @section sitemap {
-    <a href="@Url.Action("Index")" title="首页">首页</a>
+    <span class="current_action">首页</span>
 }
-
 @section sidebar {
     <div class="column-item">
-		<ol>
-			<li>
-				<div class="addItem">
-					<div class="addItem-btn btn-control">
-						<span><a href="@Url.Action("Index", "Places")" title="管理景点">管理景点</a></span>
-					</div>
-				</div>
-			</li>
+        <ol>
             <li>
-				<div class="addItem">
-					<div class="addItem-btn btn-control">
-						<span><a href="@Url.Action("Index", "Users")" title="管理用户">管理用户</a></span>
-					</div>
-				</div>
-			</li>
-		</ol>
-	</div>
+                <div class="addItem">
+                    <div class="addItem-btn btn-control">
+                        <span><a href="@Url.AdminAction("Index", "Places")" title="管理景点">管理景点</a></span>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="addItem">
+                    <div class="addItem-btn btn-control">
+                        <span><a href="@Url.AdminAction("Index", "Users")" title="管理用户">管理用户</a></span>
+                    </div>
+                </div>
+            </li>
+        </ol>
+    </div>
 }
-
-<h1>概述</h1>
+<h1>
+    概述</h1>
 <div class="text">
-	<p>本后台主要的公用。</p>
+    <p>
+        本后台主要的公用。</p>
 </div>
-<h1>信息</h1>
+<h1>
+    信息</h1>
 <div class="text">
-	<ul>
-		<li>共有省区:<span class="number">2</span>个</li>
-		<li>共有景区:<span class="number">3</span>个</li>
-		<li>共有会员:<span class="number">2</span>个</li>
-	</ul>
+    <ul>
+        <li>共有景区:<span class="number">@Model.PlaceCount</span>个</li>
+        <li>共有会员:<span class="number">2</span>个</li>
+    </ul>
 </div>

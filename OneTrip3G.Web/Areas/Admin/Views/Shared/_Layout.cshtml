@@ -8,13 +8,15 @@
     @Html.Raw(Html.RenderCssHere(new List<IClientDependencyPath> 
     {
         new BasicPath("Base", "~/Content"),
+        new BasicPath("BaseCss", "~/Content/Css"),
         new BasicPath("AdminCSS", "~/Content/Admins")
     }))
     @{
-        Html.RequiresCss("screen.css", "Base", 0, new { media = "screen, projection" })
-        .RequiresCss("base.css", "AdminCSS", 2);
-        RenderSection("styles", false);
+        Html.RequiresCss("base.css", "AdminCSS", 10)
+        .RequiresCss("screen.css", "Base", 0);
+        
     }
+    @RenderSection("styles", false)
     @Html.Raw(Html.RenderJsHere(new List<IClientDependencyPath> 
     {
         new BasicPath("Scripts", "~/Scripts"),
@@ -25,20 +27,19 @@
         .RequiresJs("modernizr-2.5.3.js", "Scripts", 1)
         .RequiresJs("jquery.validate.min.js", "Scripts", 2)
         .RequiresJs("jquery.validate.unobtrusive.js", "Scripts", 3)
-        .RequiresJs("base.js", "AdminJS", 4);
-        RenderSection("scripts", false);                                        
+        .RequiresJs("base.js", "AdminJS", 4);                                        
     }
+    @RenderSection("scripts", false)
 </head>
-
-<body>
+<body id="@Html.CurrentController()">
     <header>
         <div class="menu-wrapper">
             @RenderPage("~/Areas/Admin/Views/Shared/_Menu.cshtml")
         </div>
         <div class="setting-wrapper">
             <ul class="clearfix">
-                <li><a href="@Url.Action("Index", "Settings")" class="setting" title="设置">设置</a></li>
-                <li><a href="#" class="logout" title="注销">注销</a></li>
+                <li><a href="@Url.AdminAction("Index", "Settings")" class="setting" title="设置">设置</a></li>
+                <li><a href="@Url.Action("Logout", "Users", new { @area = ""})" class="logout" title="注销">注销</a></li>
             </ul>
         </div>
     </header>
@@ -48,33 +49,38 @@
             <div id="sidebar">@RenderSection("sidebar")</div>
         }
         <div id="main">
-			<div id="toolbar" class="toolbar clearfix">
-				<div class="toolbar-left">
-					<span class="sitemap">站点导航：</span>
-					<a href="@Url.Action("Index", "Home")" title="OneTrip 3G">OneTrip 3G</a>
-					@if (IsSectionDefined("sitemap"))
-     {
+            <div id="toolbar" class="toolbar clearfix">
+                <div class="toolbar-left">
+                    <span class="sitemap">站点导航：</span> 
+                    <a href="@Url.AdminAction("Index", "Home")" title="@Html.GlobalSettings().SiteName">
+                        @Html.GlobalSettings().SiteName
+                    </a>
+                    @if (IsSectionDefined("sitemap"))
+                    {
                         <span class="line">➔</span>
                         @RenderSection("sitemap")
-     }
-				</div>
-				<div class="toolbar-right">
-					@RenderSection("toolbar", false)
-				</div>
-			</div>
-			<div class="main-container">
-				@if (!string.IsNullOrEmpty(ViewBag.Notice))
-    {
-                    <div class="messages-notice">@ViewBag.Notice</div>
-    }
-                @if (!string.IsNullOrEmpty(ViewBag.Alert))
+                    }
+                </div>
+                <div class="toolbar-right">
+                    @RenderSection("toolbar", false)
+                </div>
+            </div>
+            <div class="main-container">
+                @ViewBag.Notice
+                @if (TempData.ContainsKey("Notice"))
                 {
-					<div class="messages-alert">@ViewBag.Alert</div>
+                    <div class="messages-notice">@TempData["Notice"]</div>
                 }
-				@RenderBody()
-			</div>
-		</div>
+                @if (TempData.ContainsKey("Alert"))
+                {
+                    <div class="messages-alert">@TempData["Alert"]</div>
+                }
+                @RenderBody()
+            </div>
+        </div>
     </div>
-    <footer></footer>
+    <footer>
+        @StackExchange.Profiling.MiniProfiler.RenderIncludes();
+    </footer>
 </body>
 </html>

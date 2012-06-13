@@ -1,0 +1,69 @@
+﻿@model OneTrip3G.Models.CreatePlace
+@{
+    ViewBag.Title = "Create";
+}
+@section scripts {
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var urlKey = $("#UrlKey");
+            var showUrl = $("#showUrl");
+            var defaultValue = showUrl.html();
+            urlKey.change(function () {
+                showUrl.html(defaultValue + urlKey.val());
+            });
+        });
+    </script>
+}
+@section sitemap {
+    <a href="@Url.Action("Index")" title="景点">景点</a> <span class="line">➔</span> <span
+        class="current_action">新增</span>
+}
+@section sidebar {
+    @RenderPage("~/Areas/Admin/Views/Places/_Sidebar.cshtml")
+}
+@using (Html.BeginForm("Create", "Places", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <div class="container form-body">
+        <h3>基本信息</h3>
+        <div class="editor-label">
+            @Html.LabelFor(m => m.Name)
+        </div>
+        <div class="editor-field">
+            @Html.TextBoxFor(m => m.Name, new { @class = "w-600" })
+            @Html.HintFor(m => m.Name)
+            @Html.ValidationMessageFor(m => m.Name)
+        </div>
+        <div class="editor-label">
+            @Html.LabelFor(m => m.UrlKey)
+        </div>
+        <div class="editor-field">
+            @Html.TextBoxFor(m => m.UrlKey, new { @class = "w-100" })
+            <span id="showUrl" class="info">@Url.RouteUrl("ShowPlace", null, "http", Url.Host())/</span>
+            @Html.HintFor(m => m.UrlKey)
+            @Html.ValidationMessageFor(m => m.UrlKey)
+        </div>
+        <h3>上传信息</h3>
+        <div class="editor-label">
+            @Html.LabelFor(m => m.VideoFile)
+        </div>
+        <div class="editor-field">
+            @Html.FileUploadFor(m => m.VideoFile, null)
+            @Html.HintFor(m => m.VideoFile)
+            @Html.ValidationMessageFor(m => m.VideoFile)
+        </div>
+        <div class="editor-label">
+            @Html.LabelFor(m => m.MapFile)
+        </div>
+        <div class="editor-field">
+            @Html.FileUploadFor(m => m.MapFile, null)
+            @Html.HintFor(m => m.MapFile)
+            @Html.ValidationMessageFor(m => m.MapFile)
+        </div>
+        <h3>操作</h3>
+        <div class="buttons wrap">
+            <input class="button btn-control" name="commit" type="submit" value="保存" />
+            <a href="@Url.Action("Index")" class="canel btn-control">取消</a>
+        </div>
+    </div>
+    
+}

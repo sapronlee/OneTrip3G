@@ -1,25 +1,65 @@
-﻿@model OneTrip3G.Models.SettingModel
+﻿@model OneTrip3G.Models.SettingViewModel
 @{
     ViewBag.Title = "设置";
 }
 
+@section sitemap {
+    <a href="@Url.Action("Index")" title="设置">设置</a>
+}
+
+@section sidebar {
+}
+
 @using (Html.BeginForm())
 {
-    <div class="wrap">
-        @Html.LabelFor(m => m.SiteName)
-        @Html.EditorFor(m => m.SiteName)
-        @Html.ValidationMessageFor(m => m.SiteName)
+    <div class="container form-body">
+        <h3>基本信息</h3>
+        <div class="editor-label">
+            @Html.LabelFor(m => m.SiteName)
+        </div>
+        <div class="editor-field">
+            @Html.TextBoxFor(m => m.SiteName, new { @class = "w-600" })
+            @Html.HintFor(m => m.SiteName)
+            @Html.ValidationMessageFor(m => m.SiteName)
+        </div>
+        <div class="editor-label">
+            @Html.LabelFor(m => m.Keywords)
+        </div>
+        <div class="editor-field">
+            @Html.TextBoxFor(m => m.Keywords, new { @class = "w-600" })
+            @Html.HintFor(m => m.Keywords)
+            @Html.ValidationMessageFor(m => m.Keywords)
+        </div>
+        <div class="editor-label">
+            @Html.LabelFor(m => m.Description)
+        </div>
+        <div class="editor-field">
+            @Html.TextAreaFor(m => m.Description, new { @class = "w-600" })
+            @Html.HintFor(m => m.Description)
+            @Html.ValidationMessageFor(m => m.Description)
+        </div>
+        <h3>内容设置</h3>
+        <div class="editor-label">
+            @Html.LabelFor(m => m.UploadPath)
+        </div>
+        <div class="editor-field">
+            @Html.TextBoxFor(m => m.UploadPath, new { @class = "w-600" })
+            @Html.HintFor(m => m.UploadPath)
+            @Html.ValidationMessageFor(m => m.UploadPath)
+        </div>
+        <div class="editor-label">
+            @Html.LabelFor(m => m.ListPageSize)
+        </div>
+        <div class="editor-field">
+            @Html.TextBoxFor(m => m.ListPageSize)
+            @Html.HintFor(m => m.ListPageSize)
+            @Html.ValidationMessageFor(m => m.ListPageSize)
+        </div>
+        <h3>操作</h3>
+        <div class="buttons wrap">
+            <input class="button btn-control" name="commit" type="submit" value="保存" />
+            <a href="@Url.Action("Index", "Home")" class="canel btn-control">取消</a>
+        </div>
     </div>
-    <div class="wrap">
-        @Html.LabelFor(m => m.Keywords)
-        @Html.EditorFor(m => m.Keywords)
-    </div>
-    <div class="wrap">
-        @Html.LabelFor(m => m.Description)
-        @Html.EditorFor(m => m.Description)
-    </div>
-    <div class="buttons wrap">
-	    <input class="button btn-control" name="commit" type="submit" value="保存" />
-	    <a href="@Url.Action("Index", "Home")" class="canel btn-control">取消</a>
-    </div>
+    
 }

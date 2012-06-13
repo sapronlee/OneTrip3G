@@ -13,8 +13,8 @@ namespace OneTrip3G.Models.Entities
         public string Keywords { get; set; }
         public string Description { get; set; }
         public string VideoFile { get; set; }
-        public string VideoSize { get; set; }
+        public int VideoSize { get; set; }
         public string MapFile { get; set; }
-        public string MapSize { get; set; }
+        public int MapSize { get; set; }
     }
 }

@@ -6,6 +6,7 @@ using System.Web.Mvc;
 
 namespace OneTrip3G.Web.Areas.Admin.Controllers
 {
+    [Authorize]
     public class BaseController : Controller
     {
 

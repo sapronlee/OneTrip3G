@@ -7,7 +7,7 @@ using System.Data.Entity.ModelConfiguration;
 
 namespace OneTrip3G.Models.Entities
 {
-    class ModelContext : DbContext
+    public class ModelContext : DbContext
     {
         public DbSet<Place> Places { get; set; }
         public DbSet<User> Users { get; set; }
@@ -19,6 +19,11 @@ namespace OneTrip3G.Models.Entities
             modelBuilder.Configurations.Add(new UserDBConfiguration());
             modelBuilder.Configurations.Add(new SettingDBConfiguration());
             base.OnModelCreating(modelBuilder);
+        }
+
+        public virtual void Commit()
+        {
+            base.SaveChanges();
         }
     }
 
