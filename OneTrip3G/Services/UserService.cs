@@ -51,5 +51,11 @@ namespace OneTrip3G.Services
         {
             unitOfWork.Commit();
         }
+
+
+        public int GetCount()
+        {
+            return repository.GetAll().Count();
+        }
     }
 }

@@ -11,6 +11,7 @@ namespace OneTrip3G.IServices
         bool AuthorizationUser(string userName, string password);
         string EncryptPassword(string password);
         void CreateUser(CreateUser viewModel);
+        int GetCount();
         void SaveUser();
     }
 }

@@ -11,5 +11,6 @@ namespace OneTrip3G.Models
     public class AdminHomeModel
     {
         public int PlaceCount { get; set; }
+        public int UserCount { get; set; }
     }
 }

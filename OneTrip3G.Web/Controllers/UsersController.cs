@@ -54,6 +54,7 @@ namespace OneTrip3G.Web.Controllers
             return View(model);
         }
 
+        [Authorize]
         public ActionResult Logout()
         {
             FormsAuthentication.SignOut();

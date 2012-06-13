@@ -33,9 +33,9 @@ namespace OneTrip3G.Web
 
             routes.MapRoute(
                 "LoginOrLogout",
-                "{action}",
+                "{loginorLogout}",
                 new { controller = "Users", action = "Login" },
-                new { action = @"login|logout" },
+                new { loginorLogout = @"login|logout" },
                 new[] { "OneTrip3G.Web.Controllers" }
             );
             

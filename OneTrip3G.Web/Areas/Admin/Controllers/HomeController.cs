@@ -11,17 +11,20 @@ namespace OneTrip3G.Web.Areas.Admin.Controllers
     public class HomeController : BaseController
     {
         private readonly IPlaceService placeService;
+        private readonly IUserService userService;
 
-        public HomeController(IPlaceService placeService)
+        public HomeController(IPlaceService placeService, IUserService userService)
         {
             this.placeService = placeService;
+            this.userService = userService;
         }
 
         public ActionResult Index()
         {
             var model = new AdminHomeModel
             {
-                PlaceCount = placeService.GetCount()
+                PlaceCount = placeService.GetCount(),
+                UserCount = userService.GetCount()
             };
             return View(model);
         }

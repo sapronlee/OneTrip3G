@@ -15,13 +15,6 @@
                     </div>
                 </div>
             </li>
-            <li>
-                <div class="addItem">
-                    <div class="addItem-btn btn-control">
-                        <span><a href="@Url.AdminAction("Index", "Users")" title="管理用户">管理用户</a></span>
-                    </div>
-                </div>
-            </li>
         </ol>
     </div>
 }
@@ -36,6 +29,6 @@
 <div class="text">
     <ul>
         <li>共有景区:<span class="number">@Model.PlaceCount</span>个</li>
-        <li>共有会员:<span class="number">2</span>个</li>
+        <li>共有用户:<span class="number">@Model.UserCount</span>个</li>
     </ul>
 </div>
