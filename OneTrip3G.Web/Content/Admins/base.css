@@ -109,7 +109,7 @@ input[type=text], input[type=password], input[type=url], input[type=email],input
 	border-radius: 5px;}
 #main textarea {height: 80px;resize: none;}
 #main input:not(.disabled):hover, #main textarea:not(.disabled):hover {box-shadow: 0 0 5px #ccc;-moz-box-shadow: 0 0 5px #ccc;-webkit-box-shadow: 0 0 5px #ccc;}
-#main .buttons {padding-left: 2px;}
+#main .buttons {padding-left: 2px; padding-bottom: 20px;}
 #main input.button {width: 200px;height: 28px;}
 #main .canel {width: 100px;height: 26px;display: inline-block;line-height: 26px;text-decoration: none;margin-left: 20px;}
 
@@ -243,7 +243,7 @@ input.w-100 {width: 100px;}
 .form-body label {padding: 3px 0; font-size:14px;}
 input[type="text"], input[type="file"], textarea {-moz-border-radius: 3px;-webkit-border-radius: 3px;border-radius: 3px; padding: 7px 2px 4px 2px;}
 input[type="file"] {margin: 7px 0; padding: 6px 0;}
-#main .field-validation-error {color: #ff0000; margin-top: 4px; display: block;}
+#main .field-validation-error {color: #ff0000; margin-top: 6px; display: block;}
 #main .field-validation-valid{display: none;}
 #main .input-validation-error{border: 1px solid #ff0000;background-color: #ffeeee;}
 #main .validation-summary-errors{font-weight: bold;color: #ff0000}

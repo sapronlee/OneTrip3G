@@ -56,6 +56,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Attributes\FileSizeAttribute.cs" />
+    <Compile Include="Attributes\FileTypeAttribute.cs" />
     <Compile Include="Attributes\SettingStorageAttribute.cs" />
     <Compile Include="Attributes\UniqueOfPlaceKeyAttribute.cs" />
     <Compile Include="Enums\StorageLocation.cs" />

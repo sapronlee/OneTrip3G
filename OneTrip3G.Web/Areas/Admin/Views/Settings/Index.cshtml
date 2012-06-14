@@ -48,6 +48,22 @@
             @Html.ValidationMessageFor(m => m.UploadPath)
         </div>
         <div class="editor-label">
+            @Html.LabelFor(m => m.VideoUploadDir)
+        </div>
+        <div class="editor-field">
+            @Html.TextBoxFor(m => m.VideoUploadDir, new { @class = "w-600" })
+            @Html.HintFor(m => m.VideoUploadDir)
+            @Html.ValidationMessageFor(m => m.VideoUploadDir)
+        </div>
+        <div class="editor-label">
+            @Html.LabelFor(m => m.MapUploadDir)
+        </div>
+        <div class="editor-field">
+            @Html.TextBoxFor(m => m.MapUploadDir, new { @class = "w-600" })
+            @Html.HintFor(m => m.MapUploadDir)
+            @Html.ValidationMessageFor(m => m.MapUploadDir)
+        </div>
+        <div class="editor-label">
             @Html.LabelFor(m => m.ListPageSize)
         </div>
         <div class="editor-field">

@@ -38,7 +38,6 @@
         </div>
         <div class="editor-field">
             @Html.TextBoxFor(m => m.UrlKey, new { @class = "w-100" })
-            <span id="showUrl" class="info">@Url.RouteUrl("ShowPlace", null, "http", Url.Host())/</span>
             @Html.HintFor(m => m.UrlKey)
             @Html.ValidationMessageFor(m => m.UrlKey)
         </div>

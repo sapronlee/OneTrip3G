@@ -71,7 +71,9 @@ namespace OneTrip3G.Services
                 Name = viewModel.Name,
                 EnglishName = viewModel.UrlKey,
                 VideoFile = FileUploads.UploadFile(viewModel.VideoFile, videoUploadDir, viewModel.UrlKey),
-                MapFile = FileUploads.UploadFile(viewModel.MapFile, mapUploadDir, viewModel.UrlKey)
+                VideoSize = viewModel.VideoFile.ContentLength,
+                MapFile = FileUploads.UploadFile(viewModel.MapFile, mapUploadDir, viewModel.UrlKey),
+                MapSize = viewModel.MapFile.ContentLength
             };
                 
             repository.Add(place);
@@ -82,6 +84,10 @@ namespace OneTrip3G.Services
         {
             var place = repository.Get(m => m.Id.Equals(id));
             repository.Delete(place);
+
+            FileUploads.DeleteFile(place.VideoFile);
+            FileUploads.DeleteFile(place.MapFile);
+
             SavePlace();
         }
 
@@ -108,12 +114,14 @@ namespace OneTrip3G.Services
             {
                 FileUploads.DeleteFile(place.VideoFile);
                 place.VideoFile = FileUploads.UploadFile(viewModel.VideoFile, videoUploadDir, viewModel.UrlKey);
+                place.VideoSize = viewModel.VideoFile.ContentLength;
             }
 
             if (viewModel.MapFile != null)
             {
                 FileUploads.DeleteFile(place.MapFile);
                 place.MapFile = FileUploads.UploadFile(viewModel.MapFile, mapUploadDir, viewModel.UrlKey);
+                place.MapSize = viewModel.MapFile.ContentLength;
             }
             
             repository.Update(place);

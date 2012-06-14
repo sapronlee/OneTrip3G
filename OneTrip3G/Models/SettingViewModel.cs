@@ -47,6 +47,7 @@ namespace OneTrip3G.Models
         [DisplayName("视频目录")]
         [StringLength(20, ErrorMessage = "视频目录不能超过20个字符。")]
         [DefaultValue("/Videos")]
+        [Required(ErrorMessage = "必须填写。")]
         [Description("网站视频的上传根目录，20个字符以内，以上传目录为起点。")]
         [SettingStorage(StorageLocation.Database, "videoUploadDir")]
         public string VideoUploadDir { get; set; }
@@ -54,6 +55,7 @@ namespace OneTrip3G.Models
         [DisplayName("地图目录")]
         [StringLength(20, ErrorMessage = "地图目录不能超过20个字符。")]
         [DefaultValue("/Maps")]
+        [Required(ErrorMessage = "必须填写。")]
         [Description("网站地图的上传根目录，20个字符以内，以上传目录为起点。")]
         [SettingStorage(StorageLocation.Database, "mapUploadDir")]
         public string MapUploadDir { get; set; }
@@ -61,6 +63,7 @@ namespace OneTrip3G.Models
         [DisplayName("分页数")]
         [Range(1, 100, ErrorMessage = "只能是1-100之间的数字。")]
         [DefaultValue(10)]
+        [Required(ErrorMessage = "必须填写。")]
         [RegularExpression(@"^[0-9]+$", ErrorMessage ="只能是数字。")]
         [Description("后台列表页面分页显示的个数，只能是数字。")]
         [SettingStorage(StorageLocation.Database, "listpagesize")]

@@ -41,12 +41,16 @@ namespace OneTrip3G.Models
 
         [DisplayName("视频")]
         [Required(ErrorMessage = "请选择视频文件。")]
-        [Description("景点的视频，小于50M。")]
+        [Description("景点的视频，小于20M。")]
+        [FileType(@"mp4", ErrorMessage = "只能是mp4的视频。")]
+        [FileSize(20480, ErrorMessage = "视频文件超出20M大小，请重新选择文件。")]
         public HttpPostedFileBase VideoFile { get; set; }
         
         [DisplayName("地图")]
         [Required(ErrorMessage = "请选择地图文件。")]
         [Description("景点的地图，小于5M。")]
+        [FileType(@"jpg|png", ErrorMessage = "只能是jpg或者png的图片。")]
+        [FileSize(5120, ErrorMessage = "地图文件超出5M大小，请重新选择文件。")]
         public HttpPostedFileBase MapFile { get; set; }
     }
 
@@ -64,11 +68,15 @@ namespace OneTrip3G.Models
         public string UrlKey { get; set; }
 
         [DisplayName("视频")]
-        [Description("景点的视频，小于50M。")]
+        [Description("景点的视频，小于20M。")]
+        [FileType(@"mp4", ErrorMessage = "只能是mp4的视频。")]
+        [FileSize(20480, ErrorMessage = "视频文件超出20M大小，请重新选择文件。")]
         public HttpPostedFileBase VideoFile { get; set; }
 
         [DisplayName("地图")]
         [Description("景点的地图，小于5M。")]
+        [FileType(@"jpg|png", ErrorMessage = "只能是jpg或者png的图片。")]
+        [FileSize(5120, ErrorMessage = "地图文件超出5M大小，请重新选择文件。")]
         public HttpPostedFileBase MapFile { get; set; }
 
         public string Video { get; set; }
