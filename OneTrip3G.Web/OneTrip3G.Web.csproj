@@ -100,6 +100,7 @@
     <Compile Include="Areas\Admin\Controllers\PlacesController.cs" />
     <Compile Include="Areas\Admin\Controllers\SettingsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\PlacesController.cs" />
     <Compile Include="Controllers\UsersController.cs" />
     <Compile Include="Extensions\MarkupExtensions.cs" />
     <Compile Include="Extensions\MvcExtensions.cs" />
@@ -127,6 +128,8 @@
     <Content Include="Content\Images\admin\new-icon.png" />
     <Content Include="Content\Images\admin\star.png" />
     <Content Include="Content\Images\admin\top_bg.png" />
+    <Content Include="Content\Images\video-js.png" />
+    <Content Include="Content\Mobiles\Base.css" />
     <Content Include="Content\print.css" />
     <Content Include="Content\screen.css" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
@@ -183,6 +186,8 @@
     <Content Include="Content\themes\base\minified\jquery.ui.slider.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
+    <Content Include="Content\video-js.css" />
+    <Content Include="Content\video-js.swf" />
     <Content Include="Content\wicegrid.css" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
@@ -196,6 +201,7 @@
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\modernizr-2.5.3.js" />
+    <Content Include="Scripts\video.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -231,6 +237,8 @@
     <None Include="Content\Css\PT_Sans-webfont.woff" />
     <Content Include="Views\Shared\_MINIPROFILER UPDATED Layout.cshtml" />
     <Content Include="Views\Users\Login.cshtml" />
+    <Content Include="Views\Places\Show.cshtml" />
+    <Content Include="Views\Places\Map.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

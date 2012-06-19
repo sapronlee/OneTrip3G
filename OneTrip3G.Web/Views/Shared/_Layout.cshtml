@@ -2,10 +2,28 @@
 <html>
 <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>@ViewBag.Title - @Html.GlobalSettings().SiteName</title>
-    <link href="@Url.Content("~/Content/Site.css")" rel="stylesheet" type="text/css" />
-    <script src="@Url.Content("~/Scripts/jquery-1.7.2.min.js")" type="text/javascript"></script>
-    <script src="@Url.Content("~/Scripts/modernizr-2.5.3.js")" type="text/javascript"></script>
+    @Html.Raw(Html.RenderCssHere(new List<IClientDependencyPath> 
+    {
+        new BasicPath("Base", "~/Content"),
+        new BasicPath("BaseCss", "~/Content/Css"),
+        new BasicPath("Mobile", "~/Content/Mobiles")
+    }))
+    @{
+        Html.RequiresCss("Base.css", "Mobile", 10)
+            .RequiresCss("video-js.css", "Base", 1)
+            .RequiresCss("screen.css", "Base", 0);
+    }
+    @RenderSection("styles", false)
+    @Html.Raw(Html.RenderJsHere(new List<IClientDependencyPath> 
+    {
+        new BasicPath("Scripts", "~/Scripts")
+    }))
+    @{
+        Html.RequiresJs("video.js", "Scripts", 0);                                        
+    }
+    @RenderSection("scripts", false)
 </head>
 <body>
     @RenderBody()

@@ -38,12 +38,18 @@ namespace OneTrip3G.Web
                 new { loginorLogout = @"login|logout" },
                 new[] { "OneTrip3G.Web.Controllers" }
             );
-            
+
+            routes.MapRoute(
+                "PlaceMap",
+                "places/{urlKey}/Map",
+                new { controller = "Places", action = "Map" },
+                new[] { "OneTrip3G.Web.Controllers" }
+            );
 
             routes.MapRoute(
                 "ShowPlace",
                 "places/{urlKey}",
-                new { controller = "Places", action = "Show", urlKey = UrlParameter.Optional },
+                new { controller = "Places", action = "Show" },
                 new[] { "OneTrip3G.Web.Controllers" }
             );
 

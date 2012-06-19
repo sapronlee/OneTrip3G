@@ -71,6 +71,14 @@
             @Html.HintFor(m => m.ListPageSize)
             @Html.ValidationMessageFor(m => m.ListPageSize)
         </div>
+        <div class="editor-label">
+            @Html.LabelFor(m => m.MapThumbnailWidth)
+        </div>
+        <div class="editor-field">
+            @Html.TextBoxFor(m => m.MapThumbnailWidth)
+            @Html.HintFor(m => m.MapThumbnailWidth)
+            @Html.ValidationMessageFor(m => m.MapThumbnailWidth)
+        </div>
         <h3>操作</h3>
         <div class="buttons wrap">
             <input class="button btn-control" name="commit" type="submit" value="保存" />

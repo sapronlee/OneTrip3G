@@ -16,5 +16,7 @@ namespace OneTrip3G.Models.Entities
         public int VideoSize { get; set; }
         public string MapFile { get; set; }
         public int MapSize { get; set; }
+        public string MapThumbnailFile { get; set; }
+        public int MapThumbnailSize { get; set; }
     }
 }

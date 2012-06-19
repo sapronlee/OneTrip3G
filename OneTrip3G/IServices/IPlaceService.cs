@@ -15,6 +15,7 @@ namespace OneTrip3G.IServices
         bool CheckPlaceExist(string englishName);
         void CreatePlace(CreatePlace viewModel);
         void UpdatePlace(EditPlace viewModel);
+        Place GetByUrlKey(string urlKey);
         void DeletePlace(int id);
         int GetCount();
         void SavePlace();

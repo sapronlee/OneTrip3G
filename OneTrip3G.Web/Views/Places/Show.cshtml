@@ -1,0 +1,25 @@
+﻿@model OneTrip3G.Models.ShowPlace
+@{
+    ViewBag.Title = Model.Name;
+}
+@section scripts {
+    <script type="text/javascript">
+        _V_.options.flash.swf = @Url.Content("~/Content/video.swf");
+    </script>
+}
+<h1>@Model.Name</h1>
+<div class="map">
+    <h2>地图</h2>
+    <a href="@Url.Action("Map", "Places", new { @urlKey = Model.UrlKey })" title="@(Model.Name + "地图")">
+        <img class="smallMap" src="@Url.Content(Model.MapThumbnailFile)" title="@(Model.Name + "地图")" alt="@(Model.Name + "地图")" />
+    </a>
+    <h5>点击查看大图</h5>
+</div>
+<div class="video">
+    <h2>视频</h2>
+    <video id="placeVideo" class="video-js vjs-default-skin" controls preload="none" width="90%"
+      poster="@Url.Content(Model.MapThumbnailFile)" data-setup="{}">
+        <source src="@Url.Content(Model.VideoFile)" type='video/mp4' />
+    </video>
+</div>
+

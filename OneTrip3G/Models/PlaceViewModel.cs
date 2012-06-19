@@ -82,4 +82,13 @@ namespace OneTrip3G.Models
         public string Video { get; set; }
         public string Map { get; set; }
     }
+
+    public class ShowPlace
+    {
+        public string UrlKey { get; set; }
+        public string Name { get; set; }
+        public string VideoFile { get; set; }
+        public string MapFile { get; set; }
+        public string MapThumbnailFile { get; set; }
+    }
 }

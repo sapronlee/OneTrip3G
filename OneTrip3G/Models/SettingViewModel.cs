@@ -68,5 +68,13 @@ namespace OneTrip3G.Models
         [Description("后台列表页面分页显示的个数，只能是数字。")]
         [SettingStorage(StorageLocation.Database, "listpagesize")]
         public int ListPageSize { get; set; }
+
+        [DisplayName("地图缩略图宽度")]
+        [DefaultValue(300)]
+        [Required(ErrorMessage = "必须填写。")]
+        [RegularExpression(@"^[0-9]+$", ErrorMessage = "只能是数字。")]
+        [Description("地图缩略图的宽度，单位px。")]
+        [SettingStorage(StorageLocation.Database, "mapthumbnailwidth")]
+        public int MapThumbnailWidth { get; set; }
     }
 }

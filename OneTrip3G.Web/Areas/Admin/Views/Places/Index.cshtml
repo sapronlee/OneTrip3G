@@ -42,7 +42,11 @@
             {
                <tr class="@(Model.IndexOf(place) % 2 != 0 ? "even" : "odd")">
                     <td class="sorted">@place.Id</td>
-                    <td><strong>@place.Name</strong></td>
+                    <td>
+                        <a href="@Url.Action("Show", "Places", new { @urlKey = place.EnglishName, area = ""})" target="_blank">
+                            <strong>@place.Name</strong>
+                        </a>
+                    </td>
                     <td>@place.EnglishName</td>
                     <td>@place.HasVideo.ToString()</td>
                     <td>@place.HasMap.ToString()</td>

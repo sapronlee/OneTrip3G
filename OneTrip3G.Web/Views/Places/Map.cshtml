@@ -1,0 +1,27 @@
+﻿@model OneTrip3G.Models.ShowPlace
+@{
+    ViewBag.Title = Model.Name;
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>@ViewBag.Title - @Html.GlobalSettings().SiteName</title>
+    @Html.Raw(Html.RenderCssHere(new List<IClientDependencyPath> 
+    {
+        new BasicPath("Base", "~/Content"),
+        new BasicPath("BaseCss", "~/Content/Css"),
+        new BasicPath("Mobile", "~/Content/Mobiles")
+    }))
+    @{
+        Html.RequiresCss("Base.css", "Mobile", 10)
+            .RequiresCss("screen.css", "Base", 0);
+    }
+</head>
+<body id="bigMap">
+    <img class="smallMap" src="@Url.Content(Model.MapFile)" title="@(Model.Name + "地图")" alt="@(Model.Name + "地图")" />
+    <p><a href="@Url.Action("Show", "Places", new { @urlKey = Model.UrlKey })">返回上一页</a></p>
+</body>
+</html>

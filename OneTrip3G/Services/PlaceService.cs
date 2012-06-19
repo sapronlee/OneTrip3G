@@ -73,7 +73,8 @@ namespace OneTrip3G.Services
                 VideoFile = FileUploads.UploadFile(viewModel.VideoFile, videoUploadDir, viewModel.UrlKey),
                 VideoSize = viewModel.VideoFile.ContentLength,
                 MapFile = FileUploads.UploadFile(viewModel.MapFile, mapUploadDir, viewModel.UrlKey),
-                MapSize = viewModel.MapFile.ContentLength
+                MapSize = viewModel.MapFile.ContentLength,
+                MapThumbnailFile = FileUploads.UploadFile(viewModel.MapFile, mapUploadDir, string.Format("{0}-Thumbnail", viewModel.UrlKey), settings.MapThumbnailWidth)
             };
                 
             repository.Add(place);
@@ -85,8 +86,12 @@ namespace OneTrip3G.Services
             var place = repository.Get(m => m.Id.Equals(id));
             repository.Delete(place);
 
-            FileUploads.DeleteFile(place.VideoFile);
-            FileUploads.DeleteFile(place.MapFile);
+            if(!string.IsNullOrEmpty(place.VideoFile))
+                FileUploads.DeleteFile(place.VideoFile);
+            if (!string.IsNullOrEmpty(place.MapFile))
+                FileUploads.DeleteFile(place.MapFile);
+            if (!string.IsNullOrEmpty(place.MapThumbnailFile))
+                FileUploads.DeleteFile(place.MapThumbnailFile);
 
             SavePlace();
         }
@@ -120,8 +125,10 @@ namespace OneTrip3G.Services
             if (viewModel.MapFile != null)
             {
                 FileUploads.DeleteFile(place.MapFile);
+                FileUploads.DeleteFile(place.MapThumbnailFile);
                 place.MapFile = FileUploads.UploadFile(viewModel.MapFile, mapUploadDir, viewModel.UrlKey);
                 place.MapSize = viewModel.MapFile.ContentLength;
+                place.MapThumbnailFile = FileUploads.UploadFile(viewModel.MapFile, mapUploadDir, string.Format("{0}-Thumbnail", viewModel.UrlKey), settings.MapThumbnailWidth);
             }
             
             repository.Update(place);
@@ -131,6 +138,12 @@ namespace OneTrip3G.Services
         public int GetCount()
         {
             return repository.GetAll().Count();
+        }
+
+
+        public Place GetByUrlKey(string urlKey)
+        {
+            return repository.Get(m => m.EnglishName.Equals(urlKey));
         }
     }
 }
