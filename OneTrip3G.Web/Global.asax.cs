@@ -12,6 +12,7 @@ using OneTrip3G.IServices;
 using OneTrip3G.Infrastructure;
 using OneTrip3G.Models;
 using StackExchange.Profiling;
+using OneTrip3G.Attributes;
 
 namespace OneTrip3G.Web
 {
@@ -24,12 +25,26 @@ namespace OneTrip3G.Web
 
         public static void RegisterGlobalFilters(GlobalFilterCollection filters)
         {
-            filters.Add(new HandleErrorAttribute());
+            filters.Add(new CustomHandlerErrorAttribute());
         }
 
         public static void RegisterRoutes(RouteCollection routes)
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
+
+            routes.MapRoute(
+                "Error404",
+                "NotFound",
+                new { controller = "Error", action = "NotFound" },
+                new[] { "OneTrip3G.Web.Controllers" }
+            );
+
+            routes.MapRoute(
+                "Error500",
+                "ServerError",
+                new { controller = "Error", action = "ServerError" },
+                new[] { "OneTrip3G.Web.Controllers" }
+            );
 
             routes.MapRoute(
                 "LoginOrLogout",

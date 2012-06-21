@@ -7,18 +7,21 @@
         _V_.options.flash.swf = @Url.Content("~/Content/video.swf");
     </script>
 }
-<h1>@Model.Name</h1>
+<div class="big-logo small">
+    <img alt="壹旅游" title="壹旅游" src="@Url.Content("~/Content/Images/Mobiles/logo.png")" /> 
+</div>
+<h2>@Model.Name</h2>
 <div class="map">
-    <h2>地图</h2>
+    <h3>地图</h3>
     <a href="@Url.Action("Map", "Places", new { @urlKey = Model.UrlKey })" title="@(Model.Name + "地图")">
         <img class="smallMap" src="@Url.Content(Model.MapThumbnailFile)" title="@(Model.Name + "地图")" alt="@(Model.Name + "地图")" />
     </a>
-    <h5>点击查看大图</h5>
+    <h5>点击小图查看大图</h5>
 </div>
 <div class="video">
-    <h2>视频</h2>
-    <video id="placeVideo" class="video-js vjs-default-skin" controls preload="none" width="90%"
-      poster="@Url.Content(Model.MapThumbnailFile)" data-setup="{}">
+    <h3>视频</h3>
+    <video id="placeVideo" class="video-js vjs-default-skin" controls preload="none" width="250"
+      poster="" data-setup="{}">
         <source src="@Url.Content(Model.VideoFile)" type='video/mp4' />
     </video>
 </div>

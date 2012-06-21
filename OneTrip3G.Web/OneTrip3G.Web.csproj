@@ -24,6 +24,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <FilesToIncludeForPublish>AllFilesInTheProject</FilesToIncludeForPublish>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -32,6 +33,19 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <ExcludeGeneratedDebugSymbol>true</ExcludeGeneratedDebugSymbol>
+    <ExcludeApp_Data>true</ExcludeApp_Data>
+    <PublishDatabaseSettings>
+      <Objects>
+        <ObjectGroup Name="ModelContext-Deployment" Order="1">
+          <Destination Path="" />
+          <Object Type="dbFullSql">
+            <PreSource Path="Data Source=.%3bInitial Catalog=OneTrip3G%3bIntegrated Security=False%3bUser ID=sa%3bPassword=123123" ScriptSchema="True" ScriptData="False" CopyAllFullTextCatalogs="False" DriDefaults="True" />
+            <Source Path="obj\Release\AutoScripts\ModelContext-Deployment_SchemaOnly.sql" Transacted="True" />
+          </Object>
+        </ObjectGroup>
+      </Objects>
+    </PublishDatabaseSettings>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Autofac, Version=2.6.1.841, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
@@ -99,6 +113,7 @@
     <Compile Include="Areas\Admin\Controllers\HomeController.cs" />
     <Compile Include="Areas\Admin\Controllers\PlacesController.cs" />
     <Compile Include="Areas\Admin\Controllers\SettingsController.cs" />
+    <Compile Include="Controllers\ErrorController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\PlacesController.cs" />
     <Compile Include="Controllers\UsersController.cs" />
@@ -120,6 +135,12 @@
     <Content Include="Content\Css\PT_Sans-webfont.svg" />
     <Content Include="Content\Css\reset.css" />
     <Content Include="Content\ie.css" />
+    <Content Include="Content\Images\Mobiles\404.png" />
+    <Content Include="Content\Images\Mobiles\frame-bottom-left.png" />
+    <Content Include="Content\Images\Mobiles\frame-bottom-middle.png" />
+    <Content Include="Content\Images\Mobiles\frame-bottom-right.png" />
+    <Content Include="Content\Images\Mobiles\frame-top-left.png" />
+    <Content Include="Content\Images\Mobiles\frame-top-middle.png" />
     <Content Include="Content\Images\admin\buttons_icon.png" />
     <Content Include="Content\Images\admin\header_menu_selected.png" />
     <Content Include="Content\Images\admin\home.png" />
@@ -128,6 +149,8 @@
     <Content Include="Content\Images\admin\new-icon.png" />
     <Content Include="Content\Images\admin\star.png" />
     <Content Include="Content\Images\admin\top_bg.png" />
+    <Content Include="Content\Images\Mobiles\frame-top-right.png" />
+    <Content Include="Content\Images\Mobiles\logo.png" />
     <Content Include="Content\Images\video-js.png" />
     <Content Include="Content\Mobiles\Base.css" />
     <Content Include="Content\print.css" />
@@ -239,6 +262,8 @@
     <Content Include="Views\Users\Login.cshtml" />
     <Content Include="Views\Places\Show.cshtml" />
     <Content Include="Views\Places\Map.cshtml" />
+    <Content Include="Views\Error\NotFound.cshtml" />
+    <Content Include="Views\Error\ServerError.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

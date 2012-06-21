@@ -20,6 +20,7 @@ namespace OneTrip3G.Web.Controllers
         public ActionResult Show(string urlKey)
         {
             var place = placeService.GetByUrlKey(urlKey);
+
             var placeViewModel = new ShowPlace
             {
                 UrlKey = place.EnglishName,
@@ -34,6 +35,7 @@ namespace OneTrip3G.Web.Controllers
         public ActionResult Map(string urlKey)
         {
             var place = placeService.GetByUrlKey(urlKey);
+
             var placeViewModel = new ShowPlace
             {
                 UrlKey = place.EnglishName,
