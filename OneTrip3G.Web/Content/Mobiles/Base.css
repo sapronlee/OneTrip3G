@@ -1,5 +1,5 @@
 ﻿body {background:#f5f5f5;}
-.frame {min-height: 370px;box-shadow: 0 0 5px #ccc;-moz-box-shadow: 0 0 5px #ccc;-webkit-box-shadow: 0 0 5px #ccc;
+.frame {box-shadow: 0 0 5px #ccc;-moz-box-shadow: 0 0 5px #ccc;-webkit-box-shadow: 0 0 5px #ccc;
         -moz-border-radius: 10px;-webkit-border-radius: 10px;border-radius: 10px;border:1px solid #ccc;
         padding: 10px; margin:10px;position:relative;background:#fff;}
 
@@ -12,6 +12,8 @@ h2 {text-align: center;}
 .video #placeVideo {text-align:center;margin:0 auto;}
 .map a {display:block;}
 .smallMap { width: 250px;}
+.bigMap { width: 100%;}
+.font18 { font-size: 18px;-webkit-text-size-adjust:none;width: 100%;}
 
 .error-404 {text-align:center;}
 .error-404 img {width: 170px; padding: 20px 0;}
