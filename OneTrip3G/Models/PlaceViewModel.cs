@@ -24,7 +24,7 @@ namespace OneTrip3G.Models
     {
         public int Id { get; set; }
 
-        [DisplayName("景区名")]
+        [DisplayName("景点名")]
         [Required(ErrorMessage = "景区名字必须填写。")]
         [Description("景点的中文名字，必填，20个字符以内。")]
         [StringLength(20, MinimumLength = 2, ErrorMessage = "景区名只能是2-20个字符之间。")]
