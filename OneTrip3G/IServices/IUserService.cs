@@ -15,6 +15,7 @@ namespace OneTrip3G.IServices
         string EncryptPassword(string password);
         void CreateUser(CreateUser viewModel);
         User GetUserById(int id);
+        void UpdateUser(User model);
         void DeleteUser(int id);
         int GetCount();
         void SaveUser();

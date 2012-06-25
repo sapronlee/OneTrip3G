@@ -68,6 +68,15 @@ namespace OneTrip3G.Services
             repository.Add(user);
             SaveUser();
         }
+
+        public void UpdateUser(User model)
+        {
+            var user = GetUserById(model.Id);
+            user.Password = EncryptPassword(model.Password);
+            repository.Update(user);
+            SaveUser();
+        }
+
         public void DeleteUser(int id)
         {
             var user = repository.Get(u => u.Id.Equals(id));
