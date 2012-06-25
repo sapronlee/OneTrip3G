@@ -29,12 +29,34 @@ namespace OneTrip3G.Services
             return user != null;
         }
 
+        public bool CheckUserNameExist(string userName)
+        {
+            var user = repository.Get(m => m.Name.Equals(userName));
+            if (user != null)
+                return false;
+            else
+                return true;
+        }
 
         public string EncryptPassword(string password)
         {
             return FormsAuthentication.HashPasswordForStoringInConfigFile(password, "MD5");
         }
 
+        public IEnumerable<UserItem> GetUsers()
+        {
+            var users = repository.GetAll();
+            IList<UserItem> userItems = new List<UserItem>();
+            foreach (var user in users)
+            {
+                userItems.Add(new UserItem
+                {
+                    Id = user.Id,
+                    UserName = user.Name,
+                });
+            }
+            return userItems.AsEnumerable<UserItem>();
+        }
 
         public void CreateUser(CreateUser viewModel)
         {
@@ -45,6 +67,18 @@ namespace OneTrip3G.Services
             };
             repository.Add(user);
             SaveUser();
+        }
+        public void DeleteUser(int id)
+        {
+            var user = repository.Get(u => u.Id.Equals(id));
+            repository.Delete(user);
+            SaveUser();
+        }
+
+        public User GetUserById(int id)
+        {
+            var user = repository.Get(u => u.Id.Equals(id));
+            return user;
         }
 
         public void SaveUser()

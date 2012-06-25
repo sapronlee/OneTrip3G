@@ -1,0 +1,42 @@
+﻿@model OneTrip3G.Models.CreateUser
+
+@{
+    ViewBag.Title = "后台注册";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+@section styles {
+    @{
+        Html.RequiresCss("register.css", "AdminCSS", 11);
+    }
+}
+@section sitemap {
+    <span class="current_action">注册用户</span>   
+}
+
+<div class="register-box">
+    @using (Html.BeginForm())
+    {  
+        <div class="inner-field">
+            <div class="editor-field">
+                @Html.TextBoxFor(m => m.UserName, new { @placeholder = "用户名" })
+            </div>
+        </div>
+        <div class="inner-field">
+            <div class="editor-field">
+                @Html.PasswordFor(m => m.Password, new { @placeholder = "密码" })
+            </div>
+        </div>
+        <div class="inner-field">
+            <div class="editor-field">
+                @Html.PasswordFor(m => m.ConfirmPassword, new { @placeholder = "重复密码" })
+            </div>
+        </div>
+        @Html.ValidationMessageFor(m => m.UserName)
+        @Html.ValidationMessageFor(m => m.Password)
+        @Html.ValidationMessageFor(m => m.ConfirmPassword)
+        <div class="button-box">
+            <input class="button" type="submit" value="注册" />
+        </div>
+    }
+    <hr />
+</div>

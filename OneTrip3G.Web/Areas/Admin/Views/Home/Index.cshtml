@@ -5,6 +5,7 @@
 @section sitemap {
     <span class="current_action">首页</span>
 }
+
 @section sidebar {
     <div class="column-item">
         <ol>
@@ -12,6 +13,17 @@
                 <div class="addItem">
                     <div class="addItem-btn btn-control">
                         <span><a href="@Url.AdminAction("Index", "Places")" title="管理景点">管理景点</a></span>
+                    </div>
+                </div>
+            </li>
+        </ol>
+    </div>
+    <div class="column-item">
+        <ol>
+            <li>
+                <div class="addItem">
+                    <div class="addItem-btn btn-control">
+                        <span><a href="@Url.Action("ShowUser")" title="管理用户">管理用户</a></span>
                     </div>
                 </div>
             </li>

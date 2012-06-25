@@ -123,6 +123,7 @@
   <ItemGroup>
     <Content Include="Content\Admins\base.css" />
     <Content Include="Content\Admins\login.css" />
+    <Content Include="Content\Admins\register.css" />
     <Content Include="Content\Css\css3.css" />
     <Content Include="Content\Css\forms.css" />
     <Content Include="Content\Css\general.css" />
@@ -251,6 +252,9 @@
     <Content Include="Areas\Admin\Views\Places\Create.cshtml" />
     <Content Include="Areas\Admin\Views\Places\_Sidebar.cshtml" />
     <Content Include="Areas\Admin\Views\Places\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\Home\Register.cshtml" />
+    <Content Include="Areas\Admin\Views\Home\ShowUser.cshtml" />
+    <Content Include="Areas\Admin\Views\Home\_Sidebar.cshtml" />
     <None Include="Content\Css\PT_Sans-webfont.eot" />
     <None Include="Content\Css\PT_Sans-webfont.ttf" />
     <None Include="Content\Css\PT_Sans-webfont.woff" />
