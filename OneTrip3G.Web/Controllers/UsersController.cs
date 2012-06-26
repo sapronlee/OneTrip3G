@@ -6,6 +6,7 @@ using System.Web.Mvc;
 using OneTrip3G.Models;
 using OneTrip3G.IServices;
 using System.Web.Security;
+using OneTrip3G.Units;
 
 namespace OneTrip3G.Web.Controllers
 {
@@ -54,11 +55,29 @@ namespace OneTrip3G.Web.Controllers
             return View(model);
         }
 
+        //注销
         [Authorize]
         public ActionResult Logout()
         {
             FormsAuthentication.SignOut();
             return RedirectToAction("Index", "Home", new { area = "Admin" });
+        }
+
+        //生成验证码图片
+        public ActionResult GetValidateCode()
+        {
+            ValidateCode vCode = new ValidateCode();
+            string code = vCode.CreateValidateCode(5);
+            Session["ValidateCode"] = code;
+            byte[] bytes = vCode.CreateValidateGraphic(code);
+            return File(bytes, @"image/jpeg");
+        }
+
+        //验证 验证码输入是否正确
+        public ActionResult CheckUserCaptcha(String captcha)
+        {
+            var result = Session["ValidateCode"].ToString().Equals(captcha) ? true : false;
+            return Json(result, JsonRequestBehavior.AllowGet);
         }
     }
 }

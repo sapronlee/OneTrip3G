@@ -18,5 +18,6 @@ namespace OneTrip3G.Models.Entities
         public int MapSize { get; set; }
         public string MapThumbnailFile { get; set; }
         public int MapThumbnailSize { get; set; }
+        public string Body { get; set; }
     }
 }

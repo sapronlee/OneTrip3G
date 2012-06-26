@@ -41,6 +41,14 @@
             @Html.HintFor(m => m.UrlKey)
             @Html.ValidationMessageFor(m => m.UrlKey)
         </div>
+        <div class="editor-label">
+            @Html.LabelFor(m => m.Body)
+        </div>
+        <div class="editor-field">
+            @Html.TextAreaFor(m => m.Body)
+            @Html.HintFor(m => m.Body)
+            @Html.ValidationMessageFor(m => m.Body)
+        </div>
         <h3>上传信息</h3>
         <div class="editor-label">
             @Html.LabelFor(m => m.VideoFile)

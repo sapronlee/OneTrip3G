@@ -22,6 +22,14 @@
             @Html.ValidationMessageFor(m => m.Name)
         </div>
         <div class="editor-label">
+            @Html.LabelFor(m => m.Body)
+        </div>
+        <div class="editor-field">
+            @Html.TextAreaFor(m => m.Body)
+            @Html.HintFor(m => m.Body)
+            @Html.ValidationMessageFor(m => m.Body)
+        </div>
+        <div class="editor-label">
             @Html.LabelFor(m => m.UrlKey)
         </div>
         <div class="editor-field">

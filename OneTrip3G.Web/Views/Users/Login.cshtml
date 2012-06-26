@@ -8,6 +8,15 @@
         Html.RequiresCss("login.css", "AdminCSS", 11);
     }
 }
+@section Scripts{
+<script type="text/javascript">
+    $(function () {    
+        $("#valiCode").bind("click", function () {    
+            this.src = "@Url.Action("GetValidateCode")";    
+        });
+    });
+ </script>
+}
 @section sitemap {
     <span class="current_action">登录</span>
 }
@@ -23,6 +32,12 @@
         <div class="inner-field">
             <div class="editor-field">
                 @Html.PasswordFor(m => m.Password, new { @placeholder = "密码" })
+            </div>
+        </div>
+        <div class="inner-valiCode">
+            <div class="editor-valiCode">
+                @Html.TextBoxFor(m => m.Captcha, new { @placeholder = "验证码" })
+                <img id="valiCode" style="cursor: pointer;" src = "@Url.Action("GetValidateCode")" alt="验证码" /> 
             </div>
         </div>
         <div class="inner-field">

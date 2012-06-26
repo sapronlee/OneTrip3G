@@ -91,6 +91,10 @@
     <Compile Include="Migrations\201206190508196_AddMapThumbnail.Designer.cs">
       <DependentUpon>201206190508196_AddMapThumbnail.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201206260226575_AddPlaceBody.cs" />
+    <Compile Include="Migrations\201206260226575_AddPlaceBody.Designer.cs">
+      <DependentUpon>201206260226575_AddPlaceBody.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AggModel.cs" />
     <Compile Include="Models\Entities\ModelContext.cs" />
@@ -113,6 +117,7 @@
     <Compile Include="Services\UserService.cs" />
     <Compile Include="Units\FileUploads.cs" />
     <Compile Include="Units\PathUnit.cs" />
+    <Compile Include="Units\ValidateCode.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

@@ -39,6 +39,11 @@ namespace OneTrip3G.Models
         [UniqueOfPlaceKey(ErrorMessage = "关键字已经存在。")]
         public string UrlKey { get; set; }
 
+        [DisplayName("景点介绍")]
+        [Description("景点介绍在2000个字符以内。")]
+        [StringLength(2000, ErrorMessage = "景点介绍只能在2000个字符以内。")]
+        public string Body { get; set; }
+
         [DisplayName("视频")]
         [Required(ErrorMessage = "请选择视频文件。")]
         [Description("景点的视频，小于20M。")]
@@ -58,7 +63,7 @@ namespace OneTrip3G.Models
     {
         public int Id { get; set; }
 
-        [DisplayName("景区名")]
+        [DisplayName("景点名")]
         [Required(ErrorMessage = "景区名字必须填写。")]
         [Description("景点的中文名字，必填，20个字符以内。")]
         [StringLength(20, MinimumLength = 2, ErrorMessage = "景区名只能是2-20个字符之间。")]
@@ -66,6 +71,11 @@ namespace OneTrip3G.Models
 
         [DisplayName("关键字")]
         public string UrlKey { get; set; }
+
+        [DisplayName("景点介绍")]
+        [Description("景点介绍在2000个字符以内。")]
+        [StringLength(2000, ErrorMessage = "景点介绍只能在2000个字符以内。")]
+        public string Body { get; set; }
 
         [DisplayName("视频")]
         [Description("景点的视频，小于20M。")]
