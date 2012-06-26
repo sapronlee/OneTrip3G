@@ -130,6 +130,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\ClientDependency\bo-li-0005d57fbce3c8821b77ffdba3cfe96d-map.xml" />
+    <Content Include="App_Data\ClientDependency\ChuckLeeMac-PC-e1f2a1d55e7c77346a676034a664390d-map.xml" />
     <Content Include="Content\Admins\base.css" />
     <Content Include="Content\Admins\login.css" />
     <Content Include="Content\Admins\register.css" />
@@ -231,12 +233,15 @@
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\modernizr-2.5.3.js" />
     <Content Include="Scripts\video.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
+      <SubType>Designer</SubType>
     </Content>
     <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
     <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
