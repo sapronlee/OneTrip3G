@@ -12,6 +12,8 @@
 #users .login-box .remember-me {color: #456D88;font-size: 12px;margin-top: 20px;float: left;}
 .editor-valiCode img{width:60px;height:30px; vertical-align:middle;margin-left:10px;margin-top:10px;}
 .editor-valiCode input{width:80px;height:22px;vertical-align:middle;margin-top:16px;}
+.editor-valiCode label{margin-left:5px;vertical-align:middle;}
+.editor-valiCode a{vertical-align:middle;}
 .remember-me label { float: right; font-size: 12px; display: block; margin-top: 2px;margin-left:5px;}
 .remember-me input { float: left;margin-top: 2px;}
 
