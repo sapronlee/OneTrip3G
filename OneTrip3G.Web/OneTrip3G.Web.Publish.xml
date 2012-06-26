@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <publishData>
-  <publishProfile publishUrl="D:\Development\Web\Relesase" deleteExistingFiles="True" ftpAnonymousLogin="False" ftpPassiveMode="True" msdeploySite="" msdeploySiteID="" msdeployRemoteSitePhysicalPath="" msdeployAllowUntrustedCertificate="False" msdeploySkipExtraFilesOnServer="True" msdeployMarkAsApp="False" profileName="OneTrip3G" publishMethod="FileSystem" replaceMatchingFiles="False" userName="" savePWD="False" userPWD="" SelectedForPublish="True">
+  <publishProfile publishUrl="D:\Development\Web\Relesase\OneTrip3G" deleteExistingFiles="True" ftpAnonymousLogin="False" ftpPassiveMode="True" msdeploySite="OneTrip3G/Mobile" msdeploySiteID="" msdeployRemoteSitePhysicalPath="" msdeployAllowUntrustedCertificate="False" msdeploySkipExtraFilesOnServer="True" msdeployMarkAsApp="False" profileName="OneTrip3G" publishMethod="FileSystem" replaceMatchingFiles="False" userName="bo.li" savePWD="True" userPWD="AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA59/rRg8QjU2xCiY1m8sqcAAAAAACAAAAAAADZgAAwAAAABAAAABrXo/gAsRGNfvEmDJ2ovRbAAAAAASAAACgAAAAEAAAAAZ1j0KwDvoNyG48ePUT4vQYAAAAjQZZeXIiEnWaI7RT1tKcPMDVY2/TlGTOFAAAANkzivkWVJb84jVp6VWaHczFJvUY" SelectedForPublish="True">
     <file relUrl="Scripts/MicrosoftAjax.js" publishTime="06/25/2012 10:13:53" />
     <file relUrl="Content/themes/base/minified/jquery.ui.slider.min.css" publishTime="06/25/2012 10:13:53" />
     <file relUrl="Views/Shared/Error.cshtml" publishTime="06/25/2012 10:13:54" />
@@ -8,13 +8,13 @@
     <file relUrl="Content/themes/base/jquery.ui.datepicker.css" publishTime="06/25/2012 10:13:52" />
     <file relUrl="Content/video-js.css" publishTime="06/25/2012 10:13:53" />
     <file relUrl="Content/themes/base/minified/jquery-ui.min.css" publishTime="06/25/2012 10:13:52" />
-    <file relUrl="bin/OneTrip3G.dll" publishTime="06/25/2012 10:43:12" />
+    <file relUrl="bin/OneTrip3G.dll" publishTime="06/26/2012 12:04:45" />
     <file relUrl="Content/themes/base/minified/jquery.ui.autocomplete.min.css" publishTime="06/25/2012 10:13:52" />
     <file relUrl="bin/Microsoft.Web.Infrastructure.dll" publishTime="06/25/2012 10:14:04" />
     <file relUrl="bin/MiniProfiler.EntityFramework.dll" publishTime="06/25/2012 10:14:08" />
     <file relUrl="Content/themes/base/images/ui-bg_highlight-soft_75_cccccc_1x100.png" publishTime="06/25/2012 10:13:52" />
     <file relUrl="Views/Shared/_MINIPROFILER UPDATED Layout.cshtml" publishTime="06/25/2012 10:13:54" />
-    <file relUrl="Views/Web.config" publishTime="06/25/2012 10:43:14" />
+    <file relUrl="Views/Web.config" publishTime="06/26/2012 13:24:59" />
     <file relUrl="Content/themes/base/jquery.ui.selectable.css" publishTime="06/25/2012 10:13:52" />
     <file relUrl="Content/themes/base/minified/images/ui-icons_222222_256x240.png" publishTime="06/25/2012 10:13:52" />
     <file relUrl="Content/Images/admin/logo.png" publishTime="06/25/2012 10:13:51" />
@@ -25,7 +25,7 @@
     <file relUrl="bin/EntityFramework.xml" publishTime="06/04/2012 11:57:41" />
     <file relUrl="Content/themes/base/jquery.ui.all.css" publishTime="06/25/2012 10:13:52" />
     <file relUrl="Areas/Admin/Views/Places/Index.cshtml" publishTime="06/25/2012 10:13:51" />
-    <file relUrl="Views/Home/Index.cshtml" publishTime="06/25/2012 10:13:54" />
+    <file relUrl="Areas/Admin/Views/Users/Index.cshtml" publishTime="06/26/2012 10:02:43" />
     <file relUrl="Content/wicegrid.css" publishTime="06/25/2012 10:13:53" />
     <file relUrl="Content/Css/mobile.css" publishTime="06/25/2012 10:13:51" />
     <file relUrl="Views/Places/Map.cshtml" publishTime="06/25/2012 10:13:54" />
@@ -44,9 +44,11 @@
     <file relUrl="Content/themes/base/images/ui-icons_2e83ff_256x240.png" publishTime="06/25/2012 10:13:52" />
     <file relUrl="bin/ClientDependency.Core.dll" publishTime="06/25/2012 10:14:04" />
     <file relUrl="Scripts/MicrosoftMvcAjax.js" publishTime="06/25/2012 10:13:53" />
-    <file relUrl="bin/OneTrip3G.Web.dll" publishTime="06/25/2012 10:43:13" />
+    <file relUrl="bin/OneTrip3G.Web.dll" publishTime="06/26/2012 14:58:01" />
     <file relUrl="Content/Images/Mobiles/frame-bottom-left.png" publishTime="06/25/2012 10:13:51" />
     <file relUrl="Scripts/Admins/base.js" publishTime="06/25/2012 10:13:53" />
+    <file relUrl="Content/Admins/register.css" publishTime="06/25/2012 11:43:15" />
+    <file relUrl="Views/Home/Index.cshtml" publishTime="06/25/2012 10:13:54" />
     <file relUrl="Scripts/jquery-ui-1.8.20.min.js" publishTime="06/25/2012 10:13:53" />
     <file relUrl="Content/Images/Mobiles/frame-bottom-middle.png" publishTime="06/25/2012 10:13:51" />
     <file relUrl="Scripts/jquery-1.7.2.min.js" publishTime="06/25/2012 10:13:53" />
@@ -58,9 +60,9 @@
     <file relUrl="Content/Images/admin/ie_bottom_bg.png" publishTime="06/25/2012 10:13:51" />
     <file relUrl="Scripts/MicrosoftMvcValidation.js" publishTime="06/25/2012 10:13:53" />
     <file relUrl="Content/themes/base/minified/jquery.ui.theme.min.css" publishTime="06/25/2012 10:13:53" />
-    <file relUrl="Web.config" publishTime="06/25/2012 10:43:14" />
-    <file relUrl="Areas/Admin/Views/Shared/_Menu.cshtml" publishTime="06/25/2012 10:13:51" />
-    <file relUrl="Content/Css/reset.css" publishTime="06/25/2012 10:13:51" />
+    <file relUrl="Web.config" publishTime="06/26/2012 15:09:19" />
+    <file relUrl="Areas/Admin/Views/Shared/_Menu.cshtml" publishTime="06/26/2012 09:51:32" />
+    <file relUrl="Areas/Admin/Views/Users/Register.cshtml" publishTime="06/26/2012 10:04:43" />
     <file relUrl="Content/themes/base/minified/images/ui-bg_glass_65_ffffff_1x400.png" publishTime="06/25/2012 10:13:52" />
     <file relUrl="Content/Css/general.css" publishTime="06/25/2012 10:13:51" />
     <file relUrl="packages.config" publishTime="06/25/2012 10:13:54" />
@@ -74,6 +76,7 @@
     <file relUrl="Content/themes/base/minified/images/ui-icons_cd0a0a_256x240.png" publishTime="06/25/2012 10:13:52" />
     <file relUrl="Views/Users/Login.cshtml" publishTime="06/25/2012 10:13:54" />
     <file relUrl="bin/MiniProfiler.xml" publishTime="06/25/2012 10:14:08" />
+    <file relUrl="Scripts/jquery.validate.unobtrusive.js" publishTime="06/25/2012 10:13:53" />
     <file relUrl="Scripts/jquery.validate.unobtrusive.min.js" publishTime="06/25/2012 10:13:53" />
     <file relUrl="Content/themes/base/minified/images/ui-bg_glass_75_e6e6e6_1x400.png" publishTime="06/25/2012 10:13:52" />
     <file relUrl="Views/_ViewStart.cshtml" publishTime="06/25/2012 10:13:54" />
@@ -81,10 +84,9 @@
     <file relUrl="Content/Admins/login.css" publishTime="06/25/2012 10:13:51" />
     <file relUrl="Content/themes/base/jquery.ui.progressbar.css" publishTime="06/25/2012 10:13:52" />
     <file relUrl="Content/themes/base/minified/images/ui-bg_glass_75_dadada_1x400.png" publishTime="06/25/2012 10:13:52" />
-    <file relUrl="Areas/Admin/Views/Places/_Sidebar.cshtml" publishTime="06/25/2012 10:13:51" />
+    <file relUrl="Areas/Admin/Views/Places/_Sidebar.cshtml" publishTime="06/26/2012 09:44:23" />
     <file relUrl="Content/themes/base/images/ui-bg_glass_75_e6e6e6_1x400.png" publishTime="06/25/2012 10:13:52" />
     <file relUrl="Content/themes/base/minified/jquery.ui.dialog.min.css" publishTime="06/25/2012 10:13:52" />
-    <file relUrl="Areas/Admin/Views/Home/Index.cshtml" publishTime="06/25/2012 10:13:51" />
     <file relUrl="Scripts/jquery.validate-vsdoc.js" publishTime="06/25/2012 10:13:53" />
     <file relUrl="Content/Images/Mobiles/404.png" publishTime="06/25/2012 10:13:51" />
     <file relUrl="Content/themes/base/jquery.ui.theme.css" publishTime="06/25/2012 10:13:52" />
@@ -94,50 +96,53 @@
     <file relUrl="Content/Images/admin/header_menu_selected.png" publishTime="06/25/2012 10:13:51" />
     <file relUrl="Areas/Admin/Views/Places/Create.cshtml" publishTime="06/25/2012 10:13:51" />
     <file relUrl="Content/themes/base/images/ui-bg_glass_95_fef1ec_1x400.png" publishTime="06/25/2012 10:13:52" />
-    <file relUrl="Content/Images/Mobiles/frame-bottom-right.png" publishTime="06/25/2012 10:13:51" />
+    <file relUrl="Areas/Admin/Views/Users/Edit.cshtml" publishTime="06/26/2012 10:07:56" />
     <file relUrl="Content/themes/base/images/ui-bg_glass_75_dadada_1x400.png" publishTime="06/25/2012 10:13:52" />
     <file relUrl="Content/themes/base/jquery.ui.button.css" publishTime="06/25/2012 10:13:52" />
     <file relUrl="Content/themes/base/minified/images/ui-icons_888888_256x240.png" publishTime="06/25/2012 10:13:52" />
     <file relUrl="Scripts/video.js" publishTime="06/25/2012 10:13:54" />
     <file relUrl="Content/themes/base/jquery.ui.core.css" publishTime="06/25/2012 10:13:52" />
     <file relUrl="bin/Autofac.dll" publishTime="06/25/2012 10:13:55" />
+    <file relUrl="Content/Images/Mobiles/frame-bottom-right.png" publishTime="06/25/2012 10:13:51" />
     <file relUrl="Content/themes/base/images/ui-bg_glass_65_ffffff_1x400.png" publishTime="06/25/2012 10:13:52" />
     <file relUrl="Content/themes/base/minified/jquery.ui.selectable.min.css" publishTime="06/25/2012 10:13:52" />
+    <file relUrl="Areas/Admin/Views/Users/_Sidebar.cshtml" publishTime="06/26/2012 09:44:23" />
     <file relUrl="Scripts/jquery-1.7.2.js" publishTime="06/25/2012 10:13:53" />
     <file relUrl="Content/themes/base/minified/images/ui-bg_glass_95_fef1ec_1x400.png" publishTime="06/25/2012 10:13:52" />
     <file relUrl="Content/themes/base/images/ui-icons_cd0a0a_256x240.png" publishTime="06/25/2012 10:13:52" />
     <file relUrl="Content/Images/Mobiles/frame-top-middle.png" publishTime="06/25/2012 10:13:51" />
-    <file relUrl="Scripts/MicrosoftMvcValidation.debug.js" publishTime="06/25/2012 10:13:53" />
+    <file relUrl="Content/Css/reset.css" publishTime="06/25/2012 10:13:51" />
     <file relUrl="Content/themes/base/jquery.ui.accordion.css" publishTime="06/25/2012 10:13:52" />
     <file relUrl="Content/themes/base/minified/jquery.ui.core.min.css" publishTime="06/25/2012 10:13:52" />
     <file relUrl="Content/themes/base/images/ui-bg_flat_0_aaaaaa_40x100.png" publishTime="06/25/2012 10:13:52" />
-    <file relUrl="Content/Admins/base.css" publishTime="06/25/2012 10:13:51" />
+    <file relUrl="Content/Admins/base.css" publishTime="06/26/2012 09:44:23" />
     <file relUrl="bin/MiniProfiler.dll" publishTime="06/25/2012 10:14:04" />
     <file relUrl="Content/Css/css3.css" publishTime="06/25/2012 10:13:51" />
     <file relUrl="Content/Css/grid.css" publishTime="06/25/2012 10:13:51" />
     <file relUrl="Content/themes/base/minified/jquery.ui.resizable.min.css" publishTime="06/25/2012 10:13:52" />
     <file relUrl="bin/WebActivator.dll" publishTime="06/25/2012 10:14:09" />
     <file relUrl="bin/Autofac.xml" publishTime="06/25/2012 10:13:55" />
-    <file relUrl="bin/Autofac.Integration.Mvc.dll" publishTime="06/25/2012 10:13:56" />
+    <file relUrl="Content/themes/base/images/ui-bg_flat_75_ffffff_40x100.png" publishTime="06/25/2012 10:13:52" />
     <file relUrl="Content/screen.css" publishTime="06/25/2012 10:13:52" />
     <file relUrl="Areas/Admin/Views/_ViewStart.cshtml" publishTime="06/25/2012 10:13:51" />
     <file relUrl="Content/themes/base/jquery.ui.slider.css" publishTime="06/25/2012 10:13:52" />
     <file relUrl="Content/themes/base/images/ui-icons_454545_256x240.png" publishTime="06/25/2012 10:13:52" />
     <file relUrl="Areas/Admin/Views/Shared/_Layout.cshtml" publishTime="06/25/2012 10:13:51" />
     <file relUrl="Content/Site.css" publishTime="06/25/2012 10:13:52" />
-    <file relUrl="Scripts/jquery.validate.unobtrusive.js" publishTime="06/25/2012 10:13:53" />
+    <file relUrl="Areas/Admin/Views/Home/Index.cshtml" publishTime="06/26/2012 09:44:23" />
     <file relUrl="Views/Shared/_Layout.cshtml" publishTime="06/25/2012 10:13:54" />
     <file relUrl="Scripts/MicrosoftAjax.debug.js" publishTime="06/25/2012 10:13:53" />
     <file relUrl="bin/EntityFramework.dll" publishTime="06/04/2012 11:57:41" />
     <file relUrl="Content/Images/video-js.png" publishTime="06/25/2012 10:13:51" />
+    <file relUrl="Scripts/MicrosoftMvcValidation.debug.js" publishTime="06/25/2012 10:13:53" />
     <file relUrl="Scripts/jquery-ui-1.8.20.js" publishTime="06/25/2012 10:13:53" />
     <file relUrl="Scripts/modernizr-2.5.3.js" publishTime="06/25/2012 10:13:53" />
     <file relUrl="Content/themes/base/images/ui-icons_888888_256x240.png" publishTime="06/25/2012 10:13:52" />
     <file relUrl="Content/Images/admin/new-icon.png" publishTime="06/25/2012 10:13:51" />
     <file relUrl="bin/ClientDependency.Core.Mvc.dll" publishTime="06/25/2012 10:14:04" />
-    <file relUrl="Content/themes/base/images/ui-bg_flat_75_ffffff_40x100.png" publishTime="06/25/2012 10:13:52" />
+    <file relUrl="bin/Autofac.Integration.Mvc.dll" publishTime="06/25/2012 10:13:56" />
     <file relUrl="Areas/Admin/Views/Settings/Index.cshtml" publishTime="06/25/2012 10:13:51" />
-    <file relUrl="Areas/Admin/Views/Web.config" publishTime="06/25/2012 10:43:14" />
+    <file relUrl="Areas/Admin/Views/Web.config" publishTime="06/26/2012 13:24:59" />
     <file relUrl="Content/Css/PT_Sans-webfont.svg" publishTime="06/25/2012 10:13:51" />
     <file relUrl="Content/themes/base/minified/images/ui-bg_flat_0_aaaaaa_40x100.png" publishTime="06/25/2012 10:13:52" />
     <file relUrl="Scripts/jquery.validate.min.js" publishTime="06/25/2012 10:13:53" />
