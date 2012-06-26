@@ -76,5 +76,10 @@ namespace OneTrip3G.Models
         [Description("地图缩略图的宽度，单位px。")]
         [SettingStorage(StorageLocation.Database, "mapthumbnailwidth")]
         public int MapThumbnailWidth { get; set; }
+
+        [DisplayName("是否是第一次运行程序")]
+        [DefaultValue(true)]
+        [SettingStorage(StorageLocation.Database, "isfirstrun")]
+        public bool IsFirstRun { get; set; }
     }
 }
