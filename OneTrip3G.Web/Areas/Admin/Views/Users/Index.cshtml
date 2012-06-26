@@ -11,7 +11,7 @@
         <span class="current_action">用户列表</span>
 }
 @section sidebar {
-    @RenderPage("~/Areas/Admin/Views/User/_Sidebar.cshtml")
+    @RenderPage("~/Areas/Admin/Views/Users/_Sidebar.cshtml")
 }
 <h1>
     用户列表</h1>
@@ -32,8 +32,11 @@
                     <td class="sorted">@user.Id</td>
                     <td>@user.UserName</td>
                     <td class="actions">
-                         <a href="@Url.AdminAction("Edit", "User", user.Id)" title="修改">修改</a> | 
-                        <a href="@Url.AdminAction("Delete", "User",user.Id)" title="删除" onclick="return confirm('确认删除吗？')">删除</a>
+                        <a href="@Url.AdminAction("Edit", "Users", user.Id)" title="修改">修改</a>
+                        @if (!Html.CheckIsCurrentUser(user.UserName))
+                        {
+                            @: | <a href="@Url.AdminAction("Delete", "Users", user.Id)" title="删除" onclick="return confirm('确认删除吗？')">删除</a>
+                        }
                     </td>
                 </tr> 
             }

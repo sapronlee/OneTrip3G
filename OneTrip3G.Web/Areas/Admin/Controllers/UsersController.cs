@@ -11,12 +11,12 @@ using OneTrip3G.Web.Extensions;
 
 namespace OneTrip3G.Web.Areas.Admin.Controllers
 {
-    public class UserController : Controller
+    public class UsersController : Controller
     {
         private readonly IUserService userService;
         //
         // GET: /Admin/User/
-        public UserController(IUserService userService)
+        public UsersController(IUserService userService)
         {
             this.userService = userService;
         }

@@ -32,7 +32,7 @@ namespace OneTrip3G.Models
         [Required(ErrorMessage = "用户名必须填写。")]
         [Description("用户名必填且唯一，15个字符以内，只能是英文字母和数字。")]
         [StringLength(15, MinimumLength = 5, ErrorMessage = "用户名只能是5-15个字符之间。")]
-        [Remote("CheckUserNameExist", "User", "Admin", ErrorMessage = "用户名已经存在。")]
+        [Remote("CheckUserNameExist", "Users", "Admin", ErrorMessage = "用户名已经存在。")]
         [RegularExpression(@"^[A-Za-z0-9]+$", ErrorMessage = "用户名只能是英文字母和数字。")]
         public string UserName { get; set; }
 

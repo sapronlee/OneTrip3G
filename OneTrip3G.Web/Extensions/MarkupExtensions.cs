@@ -18,6 +18,11 @@ namespace OneTrip3G.Web.Extensions
             return MvcApplication.Settings;
         }
 
+        public static bool CheckIsCurrentUser(this HtmlHelper helper, string userName)
+        {
+            return HttpContext.Current.User.Identity.Name.Equals(userName);
+        }
+
         public static string AdminAction(this UrlHelper helper, string action, string controller)
         {
             return helper.Action(action, controller, new { @area = "Admin" });
