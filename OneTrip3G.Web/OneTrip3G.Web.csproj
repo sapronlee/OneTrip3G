@@ -109,6 +109,7 @@
     <Compile Include="Areas\Admin\Controllers\HomeController.cs" />
     <Compile Include="Areas\Admin\Controllers\PlacesController.cs" />
     <Compile Include="Areas\Admin\Controllers\SettingsController.cs" />
+    <Compile Include="Areas\Admin\Controllers\UserController.cs" />
     <Compile Include="Controllers\ErrorController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\PlacesController.cs" />
@@ -252,9 +253,10 @@
     <Content Include="Areas\Admin\Views\Places\Create.cshtml" />
     <Content Include="Areas\Admin\Views\Places\_Sidebar.cshtml" />
     <Content Include="Areas\Admin\Views\Places\Edit.cshtml" />
-    <Content Include="Areas\Admin\Views\Home\Register.cshtml" />
-    <Content Include="Areas\Admin\Views\Home\ShowUser.cshtml" />
-    <Content Include="Areas\Admin\Views\Home\_Sidebar.cshtml" />
+    <Content Include="Areas\Admin\Views\User\_Sidebar.cshtml" />
+    <Content Include="Areas\Admin\Views\User\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\User\Register.cshtml" />
+    <Content Include="Areas\Admin\Views\User\Edit.cshtml" />
     <None Include="Content\Css\PT_Sans-webfont.eot" />
     <None Include="Content\Css\PT_Sans-webfont.ttf" />
     <None Include="Content\Css\PT_Sans-webfont.woff" />

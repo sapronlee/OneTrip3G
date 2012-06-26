@@ -1,0 +1,40 @@
+﻿@model OneTrip3G.Models.EditUser
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+@section sitemap {
+    <a href="@Url.Action("Index")" title="用户">用户</a> <span class="line">➔</span> <span
+        class="current_action">修改密码</span>
+}
+@section sidebar {
+    @RenderPage("~/Areas/Admin/Views/User/_Sidebar.cshtml")
+}
+@using (Html.BeginForm("Edit", "User", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <div class="container form-body">
+        <h3>信息</h3> 
+        <div class="editor-label">
+            @Html.LabelFor(m => m.Password)
+        </div>
+        <div class="editor-field">
+            @Html.PasswordFor(m => m.Password, new { @class = "w-200" })
+            @Html.HintFor(m => m.Password)
+            @Html.ValidationMessageFor(m => m.Password)
+        </div>
+        <div class="editor-label">
+            @Html.LabelFor(m => m.ConfirmPassword)
+        </div>
+        <div class="editor-field">
+            @Html.PasswordFor(m => m.ConfirmPassword, new { @class = "w-200" })
+            @Html.HintFor(m => m.ConfirmPassword)
+            @Html.ValidationMessageFor(m => m.ConfirmPassword)
+        </div>
+        <h3>操作</h3>
+        <div class="buttons wrap">
+            <input class="button btn-control" name="commit" type="submit" value="修改" />
+            <a href="@Url.Action("Index")" class="canel btn-control">取消</a>
+        </div>
+    </div>
+}

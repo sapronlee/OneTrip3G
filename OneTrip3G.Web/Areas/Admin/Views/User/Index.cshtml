@@ -1,0 +1,42 @@
+﻿@model List<OneTrip3G.Models.UserItem>
+@{
+    ViewBag.Title = "用户列表";
+}
+@section styles {
+    @{
+        Html.RequiresCss("wicegrid.css", "Base", 1);
+    }
+}
+@section sitemap {
+        <span class="current_action">用户列表</span>
+}
+@section sidebar {
+    @RenderPage("~/Areas/Admin/Views/User/_Sidebar.cshtml")
+}
+<h1>
+    用户列表</h1>
+<div class="wice_grid_container" id="grid">
+    <table class="wice_grid">
+        <thead>
+            <tr class="wice_grid_title_row">
+                <th class="sorted">ID</th>
+                <th>用户名</th>
+                <th class="actions">操作</th>
+            </tr>
+        </thead>
+        
+        <tbody>
+            @foreach(var user in Model)
+            {
+               <tr>
+                    <td class="sorted">@user.Id</td>
+                    <td>@user.UserName</td>
+                    <td class="actions">
+                         <a href="@Url.AdminAction("Edit", "User", user.Id)" title="修改">修改</a> | 
+                        <a href="@Url.AdminAction("Delete", "User",user.Id)" title="删除" onclick="return confirm('确认删除吗？')">删除</a>
+                    </td>
+                </tr> 
+            }
+        </tbody>
+    </table>
+</div>
