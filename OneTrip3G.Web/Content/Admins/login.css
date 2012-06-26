@@ -10,8 +10,10 @@
 #users .login-box input.button {text-align: center;border: none;width: 204px;height: 44px;line-height: 30px;color: #fff;display: inline-block;
 	text-decoration: none;font-size: 20px;text-shadow: 1px -1px 1px rgba(0, 0, 0, 0.4);background: url("/Content/Images/admin/buttons_icon.png") no-repeat 0 -55px;}
 #users .login-box .remember-me {color: #456D88;font-size: 12px;margin-top: 20px;float: left;}
-.remember-me label { float: right; font-size: 12px; display: block; margin-top: 3px;}
-.remember-me input { float: left;}
+.editor-valiCode img{width:66px;height:27px; vertical-align:middle;margin-left:10px;}
+.editor-valiCode input{width:120px;height:22px;vertical-align:middle;}
+.remember-me label { float: right; font-size: 12px; display: block; margin-top: 5px;}
+.remember-me input { float: left;margin-top: 5px;}
 
 #users .login-box hr {border: none;border-top: 1px solid #CFDEE7;border-bottom: 1px solid white;margin: 30px 0;border-image: initial;}
 #users .login-box .validation-summary-errors { border: 1px solid red; padding: 5px; background: #FCF1F9; -moz-border-radius: 5px;

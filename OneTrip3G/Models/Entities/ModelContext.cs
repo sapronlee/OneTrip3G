@@ -39,6 +39,7 @@ namespace OneTrip3G.Models.Entities
             Property(p => p.VideoSize).IsOptional();
             Property(p => p.MapFile).IsOptional().HasMaxLength(200);
             Property(p => p.MapSize).IsOptional();
+            Property(p => p.Body).HasMaxLength(2000);
         }
     }
 

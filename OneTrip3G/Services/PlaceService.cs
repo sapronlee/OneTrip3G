@@ -59,7 +59,8 @@ namespace OneTrip3G.Services
                 Name = place.Name,
                 UrlKey = place.EnglishName,
                 Video = place.VideoFile,
-                Map = place.MapFile
+                Map = place.MapFile,
+                Body = place.Body
             };
         }
 
@@ -70,6 +71,7 @@ namespace OneTrip3G.Services
                 Id = viewModel.Id,
                 Name = viewModel.Name,
                 EnglishName = viewModel.UrlKey,
+                Body = viewModel.Body,
                 VideoFile = FileUploads.UploadFile(viewModel.VideoFile, videoUploadDir, viewModel.UrlKey),
                 VideoSize = viewModel.VideoFile.ContentLength,
                 MapFile = FileUploads.UploadFile(viewModel.MapFile, mapUploadDir, viewModel.UrlKey),
@@ -114,6 +116,7 @@ namespace OneTrip3G.Services
         {
             var place = repository.GetById(viewModel.Id);
             place.Name = viewModel.Name;
+            place.Body = viewModel.Body;
 
             if (viewModel.VideoFile != null)
             {

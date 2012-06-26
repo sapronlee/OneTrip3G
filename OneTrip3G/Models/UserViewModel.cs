@@ -22,7 +22,8 @@ namespace OneTrip3G.Models
         public bool RememberMe { get; set; }
 
         [DisplayName("验证码")]
-        //[Required(ErrorMessage = "验证码必须填写。")]
+        [Required(ErrorMessage = "验证码必须填写。")]
+        [Remote("CheckUserCaptcha", "Users", ErrorMessage = "验证码输入错误。")]
         public string Captcha { get; set; }
     }
 
