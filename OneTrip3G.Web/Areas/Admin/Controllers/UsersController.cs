@@ -11,7 +11,7 @@ using OneTrip3G.Web.Extensions;
 
 namespace OneTrip3G.Web.Areas.Admin.Controllers
 {
-    public class UsersController : Controller
+    public class UsersController : BaseController
     {
         private readonly IUserService userService;
         //
