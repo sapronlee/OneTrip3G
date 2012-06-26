@@ -5,10 +5,10 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("OneTrip3G.Web")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("1Trip 3G网站")]
+[assembly: AssemblyDescription("1Trip 3G网站")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("1trip.com")]
 [assembly: AssemblyProduct("OneTrip3G.Web")]
 [assembly: AssemblyCopyright("Copyright ©  2012")]
 [assembly: AssemblyTrademark("")]

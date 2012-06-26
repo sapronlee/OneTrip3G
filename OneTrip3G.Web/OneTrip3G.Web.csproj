@@ -36,12 +36,20 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <ExcludeGeneratedDebugSymbol>true</ExcludeGeneratedDebugSymbol>
-    <ExcludeApp_Data>true</ExcludeApp_Data>
+    <ExcludeApp_Data>false</ExcludeApp_Data>
     <PublishDatabaseSettings>
       <Objects>
+        <ObjectGroup Name="ModelContext" Order="1" xmlns="">
+          <Destination Path="" />
+          <Object Type="dbFullSql" Enabled="True">
+            <PreSource Path="Server=.\sqlexpress%3bDatabase=OneTrip3G%3bUser ID=sa%3bPassword=123123%3bTrusted_Connection=False%3b" ScriptSchema="True" ScriptData="False" CopyAllFullTextCatalogs="False" DriDefaults="True" />
+            <Source Path="obj\Release\AutoScripts\ModelContext_SchemaOnly.sql" Transacted="True" />
+          </Object>
+        </ObjectGroup>
       </Objects>
     </PublishDatabaseSettings>
     <FilesToIncludeForPublish>OnlyFilesToRunTheApp</FilesToIncludeForPublish>
+    <DeployIisAppPath>OneTrip3G/OneTrip3G.Web</DeployIisAppPath>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Autofac, Version=2.6.1.841, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
