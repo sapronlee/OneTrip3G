@@ -7,13 +7,15 @@
     -webkit-border-radius: 5px;border-radius: 5px;-moz-box-shadow: 0 2px 5px rgba(0,0,0,0.1) inset;-webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1) inset;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1) inset;height: 16px;background-color: #FAFFBD;}
 #users .login-box input:focus {-moz-box-shadow: 0 1px 5px rgba(0,0,0,0.2);-webkit-box-shadow: 0 1px 5px rgba(0,0,0,0.2);box-shadow: 0 1px 5px rgba(0,0,0,0.2);}
-#users .login-box input.button {text-align: center;border: none;width: 204px;height: 44px;line-height: 30px;color: #fff;display: inline-block;
+#users .login-box input.button {margin-left:50px;text-align: center;border: none;width: 204px;height: 44px;line-height: 30px;color: #fff;display: inline-block;
 	text-decoration: none;font-size: 20px;text-shadow: 1px -1px 1px rgba(0, 0, 0, 0.4);background: url("/Content/Images/admin/buttons_icon.png") no-repeat 0 -55px;}
 #users .login-box .remember-me {color: #456D88;font-size: 12px;margin-top: 20px;float: left;}
-.editor-valiCode img{width:66px;height:27px; vertical-align:middle;margin-left:10px;}
-.editor-valiCode input{width:120px;height:22px;vertical-align:middle;}
-.remember-me label { float: right; font-size: 12px; display: block; margin-top: 5px;}
-.remember-me input { float: left;margin-top: 5px;}
+.editor-valiCode img{width:60px;height:30px; vertical-align:middle;margin-left:10px;margin-top:10px;}
+.editor-valiCode input{width:80px;height:22px;vertical-align:middle;margin-top:16px;}
+.editor-valiCode label{margin-left:5px;vertical-align:middle;}
+.editor-valiCode a{vertical-align:middle;}
+.remember-me label { float: right; font-size: 12px; display: block; margin-top: 2px;margin-left:5px;}
+.remember-me input { float: left;margin-top: 2px;}
 
 #users .login-box hr {border: none;border-top: 1px solid #CFDEE7;border-bottom: 1px solid white;margin: 30px 0;border-image: initial;}
 #users .login-box .validation-summary-errors { border: 1px solid red; padding: 5px; background: #FCF1F9; -moz-border-radius: 5px;
