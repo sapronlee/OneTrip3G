@@ -3,7 +3,7 @@
         -moz-border-radius: 10px;-webkit-border-radius: 10px;border-radius: 10px;border:1px solid #ccc;
         padding: 10px; margin:10px;position:relative;background:#fff;}
 
-.big-logo {text-align:center;margin-top:136px;}
+.big-logo {text-align:center;margin-top:100px;margin-bottom:100px;}
 .small {margin-top:10px;}
 .small img {width:170px;}
 h1 { font-size:18px;}

@@ -22,27 +22,27 @@ namespace OneTrip3G.Web.Controllers
             return View();
         }
 
-        public ActionResult Install()
-        {
+        //public ActionResult Install()
+        //{
             //只能运行1次
             //添加一个初始用户
-            if (MvcApplication.Settings.IsFirstRun)
-            {
-                var user = new CreateUser
-                {
-                    UserName = "admin",
-                    Password = "admin",
-                    ConfirmPassword = "admin"
-                };
-
-                userService.CreateUser(user);
-                MvcApplication.Settings.IsFirstRun = false;
-                return RedirectToAction("Index", "Home", new { @area = "Admin" } );
-            }
-            else
-            {
-                return RedirectToAction("Index");
-            }
-        }
+          //  if (MvcApplication.Settings.IsFirstRun)
+          //  {
+           //     var user = new CreateUser
+          //      {
+          //          UserName = "admin",
+          //          Password = "admin",
+          //          ConfirmPassword = "admin"
+          //      };
+        //
+         //       userService.CreateUser(user);
+         //       MvcApplication.Settings.IsFirstRun = false;
+         //       return RedirectToAction("Index", "Home", new { @area = "Admin" } );
+        //    }
+         //   else
+         //   {
+        //        return RedirectToAction("Index");
+       //     }
+      //  }
     }
 }
