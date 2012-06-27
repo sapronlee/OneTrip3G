@@ -4,21 +4,19 @@
     Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
 }
 @section styles {
-    @{
-        Html.RequiresCss("login.css", "AdminCSS", 11);
-    }
+    <link href="@Url.Content("~/Content/Admins/login.css")" rel="stylesheet" type="text/css" />
 }
 @section Scripts{
-<script type="text/javascript">
-    $(function () {    
-        $("#valiCode").bind("click", function () {    
-            this.src = "@Url.Action("GetValidateCode")";    
+    <script type="text/javascript">
+        $(function () {    
+            $("#valiCode").click(function () {    
+                this.attr("src", "@Url.Action("GetValidateCode")"); 
+            });
+            $("#valiChange").click(function() {
+                $("#valiCode").attr("src", "@Url.Action("GetValidateCode")");
+            });
         });
-        $("#valiChange").click(function(){
-            $("#valiCode").attr("src", "@Url.Action("GetValidateCode")");
-        });
-    });
- </script>
+    </script>
 }
 @section sitemap {
     <span class="current_action">登录</span>
