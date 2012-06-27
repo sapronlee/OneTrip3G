@@ -11,22 +11,17 @@ namespace OneTrip3G.Web.Controllers
     public class HomeController : Controller
     {
         private IUserService userService;
+        private ISettingService settingService;
 
-        public HomeController(IUserService userService)
+        public HomeController(IUserService userService, ISettingService settingService)
         {
             this.userService = userService;
+            this.settingService = settingService;
         }
 
         public ActionResult Index()
         {
-            return View();
-        }
-
-        public ActionResult Install()
-        {
-            //只能运行1次
-            //添加一个初始用户
-            if (MvcApplication.Settings.IsFirstRun)
+            if (userService.GetCount() == 0 && userService.CheckUserNameExist("admin"))
             {
                 var user = new CreateUser
                 {
@@ -36,13 +31,9 @@ namespace OneTrip3G.Web.Controllers
                 };
 
                 userService.CreateUser(user);
-                MvcApplication.Settings.IsFirstRun = false;
-                return RedirectToAction("Index", "Home", new { @area = "Admin" } );
             }
-            else
-            {
-                return RedirectToAction("Index");
-            }
+
+            return View();
         }
     }
 }
